@@ -15,283 +15,9 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
     <!-- Zappy Analytics -->
-<script>
-(function() {
-  'use strict';
-  
-  // Configuration
-  var config = {
-    websiteId: '4200474b-c80e-480a-8f33-d487b8dd5d2e',
-    apiUrl: 'https://qaapi.zappy5.com/api/analytics/track',
-    sessionDuration: 30 * 60 * 1000, // 30 minutes
-    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
-    trackPageViews: true,
-    trackClicks: true,
-    trackFormSubmissions: true
-  };
-  
-  // Generate or retrieve persistent visitor ID (30 days)
-  function getVisitorId() {
-    var visitorKey = 'zappy_visitor_' + config.websiteId;
-    var visitor = null;
-    
-    try {
-      visitor = localStorage.getItem(visitorKey);
-      if (visitor) {
-        var visitorData = JSON.parse(visitor);
-        var now = Date.now();
-        
-        // Check if visitor ID is still valid (30 days)
-        if (now - visitorData.created < config.visitorDuration) {
-          // Update last seen timestamp
-          visitorData.lastSeen = now;
-          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
-          return visitorData.id;
-        }
-      }
-    } catch (e) {
-      console.warn('Zappy Analytics: LocalStorage not available');
-    }
-    
-    // Generate new visitor ID
-    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-    
-    try {
-      localStorage.setItem(visitorKey, JSON.stringify({
-        id: newVisitorId,
-        created: Date.now(),
-        lastSeen: Date.now()
-      }));
-    } catch (e) {
-      // Continue without local storage
-    }
-    
-    return newVisitorId;
-  }
-  
-  // Generate or retrieve session ID (30 minutes)
-  function getSessionId() {
-    var sessionKey = 'zappy_session_' + config.websiteId;
-    var session = null;
-    
-    try {
-      session = sessionStorage.getItem(sessionKey);
-      if (session) {
-        var sessionData = JSON.parse(session);
-        var now = Date.now();
-        
-        // Check if session is still valid
-        if (now - sessionData.timestamp < config.sessionDuration) {
-          // Update timestamp
-          sessionData.timestamp = now;
-          sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
-          return sessionData.id;
-        }
-      }
-    } catch (e) {
-      console.warn('Zappy Analytics: SessionStorage not available');
-    }
-    
-    // Generate new session ID
-    var newSessionId = 'zs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-    
-    try {
-      sessionStorage.setItem(sessionKey, JSON.stringify({
-        id: newSessionId,
-        timestamp: Date.now()
-      }));
-    } catch (e) {
-      // Continue without session storage
-    }
-    
-    return newSessionId;
-  }
-  
-  var visitorId = getVisitorId();
-  var sessionId = getSessionId();
-  
-  // Site Optimization Agent — visual heatmap helpers
-  function getBandAnchor(el) {
-    var node = el;
-    while (node && node !== document.body) {
-      if (node.getAttribute && node.getAttribute('data-band-index') != null) {
-        return { bandIndex: node.getAttribute('data-band-index'), sectionId: node.id || null };
-      }
-      node = node.parentElement;
-    }
-    node = el;
-    while (node && node !== document.body) {
-      if (node.tagName === 'SECTION' && node.id) {
-        return { bandIndex: null, sectionId: node.id };
-      }
-      node = node.parentElement;
-    }
-    return { bandIndex: null, sectionId: null };
-  }
-  function heatmapFields(el, e) {
-    var anchor = getBandAnchor(el);
-    return {
-      x: Math.round((e && e.pageX) || 0),
-      y: Math.round((e && e.pageY) || 0),
-      bandIndex: anchor.bandIndex,
-      sectionId: anchor.sectionId
-    };
-  }
-  function mergeFields(base, extra) {
-    for (var k in extra) { if (Object.prototype.hasOwnProperty.call(extra, k)) base[k] = extra[k]; }
-    return base;
-  }
-  // Track an event
-  function trackEvent(eventType, data) {
-    data = data || {};
-    
-    var eventData = {
-      website_id: config.websiteId,
-      event_type: eventType,
-      page_path: window.location.pathname,
-      referrer: document.referrer || 'direct',
-      visitor_id: visitorId,
-      session_id: sessionId,
-      metadata: data
-    };
-    
-    // Use sendBeacon if available (better for page unload events)
-    if (navigator.sendBeacon) {
-      var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
-      navigator.sendBeacon(config.apiUrl, blob);
-    } else {
-      // Fallback to fetch
-      fetch(config.apiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(eventData),
-        keepalive: true
-      }).catch(function(error) {
-        console.warn('Zappy Analytics: Failed to track event', error);
-      });
-    }
-  }
-  
-  // Track page view
-  if (config.trackPageViews) {
-    trackEvent('pageview', {
-      title: document.title,
-      url: window.location.href
-    });
-  }
-  
-  // Track clicks on important elements
-  if (config.trackClicks) {
-    document.addEventListener('click', function(e) {
-      var target = e.target;
-      
-      // Track button clicks (counted as actions)
-      if (target.tagName === 'BUTTON' || target.closest('button')) {
-        var button = target.tagName === 'BUTTON' ? target : target.closest('button');
-        var clickMeta = {
-          element: 'button',
-          text: button.textContent.trim().substring(0, 100),
-          id: button.id || null,
-          class: button.className || null
-        };
-        mergeFields(clickMeta, heatmapFields(button, e));
-        trackEvent('click', clickMeta);
-      }
-      
-      // Track link clicks (navigation - not counted as actions)
-      else if (target.tagName === 'A' || target.closest('a')) {
-        var link = target.tagName === 'A' ? target : target.closest('a');
-        var navMeta = {
-          element: 'link',
-          text: link.textContent.trim().substring(0, 100),
-          href: link.href,
-          external: link.hostname !== window.location.hostname
-        };
-        mergeFields(navMeta, heatmapFields(link, e));
-        trackEvent('navigation', navMeta);
-      }
-    }, true);
-  }
-  
-  // Track scroll depth milestones (visual heatmap reach signal)
-  (function() {
-    var milestones = [25, 50, 75, 100];
-    var fired = {};
-    var maxDepth = 0;
-    function computeDepth() {
-      var doc = document.documentElement;
-      var scrollable = (doc.scrollHeight - window.innerHeight);
-      if (scrollable <= 0) return 100;
-      return Math.min(100, Math.round(((window.scrollY || window.pageYOffset || 0) / scrollable) * 100));
-    }
-    var ticking = false;
-    function onScroll() {
-      if (ticking) return;
-      ticking = true;
-      window.requestAnimationFrame(function() {
-        var depth = computeDepth();
-        if (depth > maxDepth) maxDepth = depth;
-        for (var i = 0; i < milestones.length; i++) {
-          var m = milestones[i];
-          if (depth >= m && !fired[m]) {
-            fired[m] = true;
-            trackEvent('scroll_depth', { milestone: m, maxDepthPct: maxDepth });
-          }
-        }
-        ticking = false;
-      });
-    }
-    window.addEventListener('scroll', onScroll, { passive: true });
-  })();
-  
-  // Track form submissions
-  if (config.trackFormSubmissions) {
-    document.addEventListener('submit', function(e) {
-      var form = e.target;
-      
-      trackEvent('form_submit', {
-        form_id: form.id || null,
-        form_name: form.name || null,
-        form_action: form.action || null,
-        form_method: form.method || 'GET'
-      });
-    }, true);
-  }
-  
-  // Track time on page (send on page unload)
-  var pageLoadTime = Date.now();
-  
-  window.addEventListener('beforeunload', function() {
-    var timeOnPage = Math.floor((Date.now() - pageLoadTime) / 1000); // in seconds
-    
-    trackEvent('page_unload', {
-      time_on_page: timeOnPage,
-      page_path: window.location.pathname
-    });
-  });
-  
-  // Expose tracking function globally for custom events
-  window.zappyAnalytics = {
-    track: trackEvent,
-    getVisitorId: function() { return visitorId; },
-    getSessionId: function() { return sessionId; }
-  };
-  
-})();
-</script>
-<!-- End Zappy Analytics -->
-    <meta property="og:title" content="החשבון שלי">
-    <meta property="og:description" content="החשבון שלי">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="החשבון שלי">
-    <meta name="twitter:description" content="החשבון שלי">
-    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://studio242-home-design-systems.zappy5.app#organization","name":"סטודיו 242 - מערכות עיצוב לבית","url":"https://studio242-home-design-systems.zappy5.app","description":"A minimalist, emotionally-driven art and photography brand rooted in the philosophy of Wabi-Sabi — finding beauty in imperfection, stillness, and simplicity. The artist creates photography-based artworks designed to integrate harmoniously into living and working spaces, evoking feeling rather than serving as mere decoration. The brand exudes a quiet, slow, non-commercial presence — like a serene gallery experience — and bridges the worlds of fine art, interior design, and emotional well-being. The visual identity is built around large, powerful images, generous white space, and an atmosphere of calm intentionality.","address":{"@type":"PostalAddress","streetAddress":"קיבוץ כפר הנשיא ד.נ. גליל עליון, 1230500, ישראל"},"contactPoint":[{"@type":"ContactPoint","contactType":"customer service","email":"ofirmsika@gmail.com","telephone":"052-5859828"}]},{"@type":"WebSite","@id":"https://studio242-home-design-systems.zappy5.app#website","url":"https://studio242-home-design-systems.zappy5.app","name":"סטודיו 242 - מערכות עיצוב לבית","publisher":{"@id":"https://studio242-home-design-systems.zappy5.app#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://studio242-home-design-systems.zappy5.app"},{"@type":"ListItem","position":2,"name":"Account","item":"https://studio242-home-design-systems.zappy5.app/account"}]}]}</script>
-    <meta property="og:type" content="website"> <meta property="og:locale" content="he_IL">     <link rel="preconnect" href="https://cdnjs.cloudflare.com"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"> <!-- Favicons --> <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"> <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"> <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png"> <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png"> <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png"> <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"> <!-- Cookie Consent --> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" media="print" onload="this.media='all'">  <!-- Mickidum Accessibility Toolbar -->   <!-- ZAPPY_INTEGRATION_START analytics:add_facebook_pixel --> <!-- Facebook Pixel --> <script> !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '1011549347909087'); fbq('track', 'PageView'); </script> <!-- ZAPPY_INTEGRATION_END analytics:add_facebook_pixel --> <style id="zappy-cta-mobile-style"> /* Hide CTA list item on desktop (tablets and up) */ @media (min-width: 769px) { .nav-cta-item-mobile { display: none !important; } } /* Show CTA list item on mobile */ @media (max-width: 768px) { .nav-cta-item-mobile { display: list-item !important; } } </style> <style id="zappy-nested-menu-style"> /* Desktop only: vertically center nav items */ @media (min-width: 769px) { .nav-menu, #navMenu { align-items: center !important; } } /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */ .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { display: inline-block !important; padding: 0.5rem 1rem !important; color: var(--nav-color) !important; font-weight: 500 !important; line-height: 1.7 !important; cursor: default !important; user-select: none !important; vertical-align: middle !important; text-decoration: none !important; margin: 0 !important; transition: color 0.3s ease !important; } .nav-menu > li > .menu-group-title:hover, #navMenu > li > .menu-group-title:hover { color: var(--nav-hover-color) !important; } /* Desktop: show submenu on Menu Group hover */ li:has(.menu-group-title):hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; /* Enable interaction when hovering */ } /* Hide menu items marked as hidden (overrides hover states) */ .zappy-hidden-menu-item, li:has(.menu-group-title):hover > .sub-menu .zappy-hidden-menu-item { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; } /* Keep submenu visible when hovering over the submenu itself */ .sub-menu:hover { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; } /* Nested dropdown menu styles - using more specific selectors */ .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu { display: block !important; /* Ensure submenu is in the DOM */ position: absolute !important; top: 100%; left: 0; right: auto; min-width: 200px; background: white; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); border-radius: 8px; padding: 8px 0; margin-top: 0px; /* Remove gap to prevent hover loss */ opacity: 0 !important; visibility: hidden !important; transform: translateY(-10px); transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s; z-index: 1000; list-style: none; pointer-events: none; /* Prevent interaction when hidden */ } /* RTL (Hebrew/Arabic) submenu positioning - align to right instead of left */ [dir="rtl"] .nav-menu .sub-menu, [dir="rtl"] nav .sub-menu, [dir="rtl"] .navbar .sub-menu, html[lang="he"] .nav-menu .sub-menu, html[lang="he"] nav .sub-menu, html[lang="he"] .navbar .sub-menu, html[lang="ar"] .nav-menu .sub-menu, html[lang="ar"] nav .sub-menu, html[lang="ar"] .navbar .sub-menu { left: auto; right: 0; } /* Show submenu on parent hover - more specific selectors */ .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; /* Enable interaction when visible */ } /* Parent item must be relatively positioned */ .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu) { position: relative; } /* Style for submenu items */ .sub-menu li { list-style: none; margin: 0; padding: 0; } .sub-menu a, .sub-menu .menu-group-title { display: block !important; padding: 10px 12px !important; color: #333 !important; font-weight: 600 !important; text-decoration: none; transition: background-color 0.2s; white-space: nowrap; cursor: default; } .sub-menu a:hover { background-color: #f5f5f5; } /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */ .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { display: inline-block !important; padding: 0.5rem 1rem !important; color: var(--nav-color) !important; font-weight: 500 !important; line-height: 1.7 !important; cursor: default !important; user-select: none !important; vertical-align: middle !important; text-decoration: none !important; margin: 0 !important; transition: color 0.3s ease !important; } .nav-menu > li > .menu-group-title:hover, #navMenu > li > .menu-group-title:hover { color: var(--nav-hover-color) !important; background-color: transparent !important; } /* On mobile, show nested menus as expandable accordion */ @media (max-width: 768px) { /* Mobile submenu styling */ .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu { position: static !important; transform: none !important; box-shadow: none !important; background: transparent !important; margin-top: 0 !important; max-height: 0; overflow: hidden; opacity: 0; visibility: hidden; transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease; padding: 0 !important; border-radius: 0 !important; } /* Expanded state — no internal scroll; parent navMenu scrolls */ .sub-menu.mobile-expanded { max-height: none !important; overflow-y: visible !important; opacity: 1 !important; visibility: visible !important; padding: 8px 0 8px 16px !important; } /* RTL padding adjustment */ [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded, html[lang="ar"] .sub-menu.mobile-expanded { padding: 8px 16px 8px 0 !important; } /* Disable hover behavior on mobile */ .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu { opacity: 0; visibility: hidden; pointer-events: none; } /* Enable visibility for expanded submenus */ .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; } .sub-menu a { padding: 10px 0 !important; display: block !important; font-size: 14px !important; white-space: normal !important; } .sub-menu a:hover { background-color: transparent !important; } /* Parent item wrapper - flex layout with relative positioning for absolute toggle */ .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu) { display: flex !important; flex-wrap: wrap !important; align-items: center !important; position: relative !important; min-height: 44px !important; } /* Parent link - takes full width since toggle is absolute (not a flex child) */ .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { flex: 1 !important; min-width: 0 !important; } /* Normalize menu-group-title in mobile nav to match link alignment */ .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { padding: 0 !important; line-height: inherit !important; } /* Submenu takes full width below parent */ .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu, .navbar li:has(.sub-menu) > .sub-menu { flex-basis: 100% !important; width: 100% !important; } /* HIDE EXISTING CHEVRONS/ARROWS from cloned sites to prevent duplicates */ .nav-menu li:has(.sub-menu) > a .fa-chevron-down, .nav-menu li:has(.sub-menu) > a .fa-angle-down, .nav-menu li:has(.sub-menu) > a [class*="chevron"], .nav-menu li:has(.sub-menu) > a [class*="arrow"], nav li:has(.sub-menu) > a [class*="chevron"], nav li:has(.sub-menu) > a [class*="arrow"], #navMenu li:has(.sub-menu) > a [class*="chevron"], #navMenu li:has(.sub-menu) > a [class*="arrow"] { display: none !important; visibility: hidden !important; } /* Toggle arrow button - flex child that stretches to match nav-link height */ .mobile-submenu-toggle { display: flex !important; align-items: center !important; justify-content: center !important; width: 44px !important; height: auto !important; background: transparent !important; border: none !important; cursor: pointer !important; padding: 0 !important; margin: 0 !important; position: static !important; flex-shrink: 0 !important; align-self: stretch !important; z-index: 2 !important; -webkit-tap-highlight-color: transparent; } .mobile-submenu-toggle::after { content: '' !important; display: block !important; width: 0 !important; height: 0 !important; border-left: 6px solid transparent !important; border-right: 6px solid transparent !important; border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important; } /* Rotate arrow when expanded */ .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; } } /* Hide toggle button on desktop */ @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } } </style> <script id="zappy-mobile-menu-script"> // Mobile menu toggle for nested submenus (including Menu Groups) // Uses separate toggle button - link navigates, arrow toggles submenu (function() { function initMobileMenuToggles() { // Only run on mobile if (window.innerWidth > 768) { // Remove any toggle buttons on desktop document.querySelectorAll('.mobile-submenu-toggle').forEach(btn => btn.remove()); document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => { menu.classList.remove('mobile-expanded'); }); console.log('[MOBILE MENU] Desktop mode - cleanup done'); return; } console.log('[MOBILE MENU] Initializing mobile menu toggles...'); // Find all parent menu items (items with .sub-menu) const menuItemsWithSubmenus = document.querySelectorAll( '.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)' ); console.log('[MOBILE MENU] Found', menuItemsWithSubmenus.length, 'items with submenus'); menuItemsWithSubmenus.forEach(function(li) { // Skip if already has toggle button if (li.querySelector('.mobile-submenu-toggle')) { return; } const submenu = li.querySelector('.sub-menu'); const parentLink = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title'); if (!submenu || !parentLink) return; // Create toggle button const toggleBtn = document.createElement('button'); toggleBtn.className = 'mobile-submenu-toggle'; toggleBtn.setAttribute('aria-label', 'Toggle submenu'); toggleBtn.setAttribute('type', 'button'); // Insert toggle button after the link parentLink.insertAdjacentElement('afterend', toggleBtn); console.log('[MOBILE MENU] Created toggle button for:', parentLink.textContent?.trim()); // Handle toggle button click - only toggles submenu toggleBtn.addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation(); const isExpanded = submenu.classList.contains('mobile-expanded'); // Close all other submenus first document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) { if (menu !== submenu) { menu.classList.remove('mobile-expanded'); const otherToggle = menu.parentElement.querySelector('.mobile-submenu-toggle'); if (otherToggle) otherToggle.classList.remove('expanded'); } }); // Toggle this submenu submenu.classList.toggle('mobile-expanded'); toggleBtn.classList.toggle('expanded'); console.log('[MOBILE MENU] Toggled submenu:', !isExpanded ? 'expanded' : 'collapsed'); }); // Parent link navigates normally - no preventDefault }); } // Initialize on DOM load if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileMenuToggles); } else { initMobileMenuToggles(); } // Re-initialize on window resize (but use debounce to avoid too many calls) let resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileMenuToggles, 250); }); // Also initialize when mobile menu becomes visible // This handles cases where the mobile menu is hidden initially const observer = new MutationObserver(function(mutations) { mutations.forEach(function(mutation) { if (mutation.type === 'attributes' && mutation.attributeName === 'class') { const target = mutation.target; if (target.classList.contains('active') || target.style.display !== 'none') { console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...'); setTimeout(initMobileMenuToggles, 100); } } }); }); // Observe mobile menu containers const mobileMenus = document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu'); mobileMenus.forEach(function(menu) { observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] }); }); })(); </script> <style data-zappy-section-v2-css="true"> /* V2 Regenerated Section CSS */ .index-hero-section { position: relative; width: 100%; min-height: 100vh; display: flex; align-items: center; justify-content: flex-start; overflow: hidden; background-color: var(--bg-dark); color: var(--text-dark); } .index-hero-section .hero-bg-wrapper { position: absolute; inset: 0; z-index: 0; } .index-hero-section .hero-bg-image { position: absolute; inset: 0; width: 100%; height: 100%; background-size: cover; background-position: center; } .index-hero-section .hero-scrim { position: absolute; inset: 0; z-index: 1; background: linear-gradient( 135deg, rgba(47, 41, 36, 0.55) 0%, rgba(47, 41, 36, 0.35) 40%, rgba(47, 41, 36, 0.08) 70%, rgba(47, 41, 36, 0.02) 100% ); pointer-events: none; } .index-hero-section .hero-overlay-group { position: relative; z-index: 10; width: 100%; max-width: 1200px; margin: 0 auto; padding: 120px 48px 80px; display: flex; justify-content: flex-start; align-items: center; } .index-hero-section .hero-text-card { max-width: 580px; background: rgba(247, 242, 234, 0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(221, 210, 196, 0.6); border-radius: 2px; padding: 56px 48px; box-shadow: 0 20px 50px rgba(47, 41, 36, 0.18), 0 8px 24px rgba(47, 41, 36, 0.08); text-align: right; animation: heroCardFadeIn 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) forwards; opacity: 0; transform: translateY(20px); } @keyframes heroCardFadeIn { 0% { opacity: 0; transform: translateY(24px); } 100% { opacity: 1; transform: translateY(0); } } .index-hero-section .hero-headline { font-family: 'Cormorant Garamond', 'Canela', serif; font-size: 3.5rem; font-weight: 300; line-height: 1.15; letter-spacing: 0.005em; color: #2F2924; margin: 0 0 24px 0; text-align: right; } .index-hero-section .hero-subtitle { font-family: 'Cormorant Garamond', 'Canela', serif; font-size: 1.5rem; font-weight: 400; line-height: 1.4; color: #3D342E; margin: 0 0 20px 0; text-align: right; } .index-hero-section .hero-body { font-family: 'Inter', 'Neue Haas Grotesk Text', sans-serif; font-size: 1rem; font-weight: 400; line-height: 1.8; color: #3D342E; margin: 0 0 36px 0; text-align: right; } .index-hero-section .hero-cta-group { display: flex; flex-wrap: wrap; gap: 16px; justify-content: flex-start; flex-direction: row; } .index-hero-section .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-family: 'Inter', 'Neue Haas Grotesk Text', sans-serif; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; border-radius: 2px; padding: 14px 32px; transition: all 0.3s ease; white-space: nowrap; cursor: pointer; border: none; } .index-hero-section .btn-primary { background-color: #8D5B3F; color: #F8F3EB; box-shadow: 0 4px 12px rgba(141, 91, 63, 0.25); } .index-hero-section .btn-primary:hover { background-color: #7A4E36; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(141, 91, 63, 0.35); } .index-hero-section .btn-whatsapp { background-color: #25D366; color: #FFFFFF; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); } .index-hero-section .btn-whatsapp:hover { background-color: #20BD5A; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4); } .index-hero-section .whatsapp-icon { width: 20px; height: 20px; flex-shrink: 0; } @media (max-width: 768px) { .index-hero-section { min-height: 100vh; align-items: flex-end; } .index-hero-section .hero-overlay-group { padding: 100px 16px 32px; justify-content: center; } .index-hero-section .hero-text-card { max-width: 100%; width: 100%; padding: 36px 24px; border-radius: 2px; background: rgba(247, 242, 234, 0.94); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); } .index-hero-section .hero-headline { font-size: 2.5rem; line-height: 1.2; margin-bottom: 16px; } .index-hero-section .hero-subtitle { font-size: 1.25rem; margin-bottom: 14px; } .index-hero-section .hero-body { font-size: 1rem; margin-bottom: 28px; } .index-hero-section .hero-cta-group { flex-direction: column; width: 100%; gap: 12px; } .index-hero-section .btn { width: 100%; justify-content: center; padding: 16px 24px; font-size: 0.9rem; } } /* ZAPPY_POSTGEN_GUARD_HERO_FONT_CAP:index-hero */ .hero h1, .hero-section h1, [class*="hero-"] h1, [class~="hero"] h1, .hero .hero-title, .hero-title { font-size: 48px !important; line-height: 1.2 !important; } @media (max-width: 1024px) { .hero h1, .hero-section h1, [class*="hero-"] h1, [class~="hero"] h1, .hero .hero-title, .hero-title { font-size: 36px !important; } } @media (max-width: 768px) { .hero h1, .hero-section h1, [class*="hero-"] h1, [class~="hero"] h1, .hero .hero-title, .hero-title { font-size: 28px !important; } } </style> 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style id="zappy-critical-above-fold-css">
-html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{box-sizing:inherit}body{margin:0;min-width:320px;overflow-x:clip}img,svg,video{max-width:100%;height:auto}main{display:block}.container{width:min(100% - 32px,1200px);margin-inline:auto}.navbar,nav.navbar,header .navbar,header[role="banner"]{position:relative;z-index:1000;width:100%}.nav-container,.navbar .container{display:flex;align-items:center;justify-content:space-between;min-height:64px}.logo,.logo-link img{display:block;width:35px;height:35px;object-fit:contain}.nav-menu,#navMenu{list-style:none}.hero-section,.index-hero-section,section[class*="hero"]{position:relative;overflow:hidden;min-height:560px}.hero-bg-wrapper,.hero-bg-image,section[class*="hero"] [class*="hero-bg"]{position:absolute;inset:0;width:100%;height:100%}.hero-bg-wrapper img,.hero-bg-image img,section[class*="hero"] [data-hero-bg],section[class*="hero"] img[data-hero-background="true"]{width:100%!important;height:100%!important;object-fit:cover!important;display:block}.hero-content,section[class*="hero"] .container{position:relative;z-index:2}@media(max-width:768px){.nav-container,.navbar .container{min-height:60px}.nav-menu,#navMenu{max-width:100vw;overflow-x:hidden}.hero-section,.index-hero-section,section[class*="hero"]{min-height:100svh}}
+<!-- ZAPPY_INTEGRATION_END analytics:add_facebook_pixel --> <style id="zappy-cta-mobile-style"> /* Hide CTA list item on desktop (tablets and up) */ @media (min-width: 769px) { .nav-cta-item-mobile { display: none !important; } } /* Show CTA list item on mobile */ @media (max-width: 768px) { .nav-cta-item-mobile { display: list-item !important; } } </style> <style id="zappy-nested-menu-style"> /* Desktop only: vertically center nav items */ @media (min-width: 769px) { .nav-menu, #navMenu { align-items: center !important; } } /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */ .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { display: inline-block !important; padding: 0.5rem 1rem !important; color: var(--nav-color) !important; font-weight: 500 !important; line-height: 1.7 !important; cursor: default !important; user-select: none !important; vertical-align: middle !important; text-decoration: none !important; margin: 0 !important; transition: color 0.3s ease !important; } .nav-menu > li > .menu-group-title:hover, #navMenu > li > .menu-group-title:hover { color: var(--nav-hover-color) !important; } /* Desktop: show submenu on Menu Group hover */ li:has(.menu-group-title):hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; /* Enable interaction when hovering */ } /* Hide menu items marked as hidden (overrides hover states) */ .zappy-hidden-menu-item, li:has(.menu-group-title):hover > .sub-menu .zappy-hidden-menu-item { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; } /* Keep submenu visible when hovering over the submenu itself */ .sub-menu:hover { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; } /* Nested dropdown menu styles - using more specific selectors */ .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu { display: block !important; /* Ensure submenu is in the DOM */ position: absolute !important; top: 100%; left: 0; right: auto; min-width: 200px; background: white; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); border-radius: 8px; padding: 8px 0; margin-top: 0px; /* Remove gap to prevent hover loss */ opacity: 0 !important; visibility: hidden !important; transform: translateY(-10px); transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s; z-index: 1000; list-style: none; pointer-events: none; /* Prevent interaction when hidden */ } /* RTL (Hebrew/Arabic) submenu positioning - align to right instead of left */ [dir="rtl"] .nav-menu .sub-menu, [dir="rtl"] nav .sub-menu, [dir="rtl"] .navbar .sub-menu, html[lang="he"] .nav-menu .sub-menu, html[lang="he"] nav .sub-menu, html[lang="he"] .navbar .sub-menu, html[lang="ar"] .nav-menu .sub-menu, html[lang="ar"] nav .sub-menu, html[lang="ar"] .navbar .sub-menu { left: auto; right: 0; } /* Show submenu on parent hover - more specific selectors */ .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; /* Enable interaction when visible */ } /* Parent item must be relatively positioned */ .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu) { position: relative; } /* Style for submenu items */ .sub-menu li { list-style: none; margin: 0; padding: 0; } .sub-menu a, .sub-menu .menu-group-title { display: block !important; padding: 10px 12px !important; color: #333 !important; font-weight: 600 !important; text-decoration: none; transition: background-color 0.2s; white-space: nowrap; cursor: default; } .sub-menu a:hover { background-color: #f5f5f5; } /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */ .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { display: inline-block !important; padding: 0.5rem 1rem !important; color: var(--nav-color) !important; font-weight: 500 !important; line-height: 1.7 !important; cursor: default !important; user-select: none !important; vertical-align: middle !important; text-decoration: none !important; margin: 0 !important; transition: color 0.3s ease !important; } .nav-menu > li > .menu-group-title:hover, #navMenu > li > .menu-group-title:hover { color: var(--nav-hover-color) !important; background-color: transparent !important; } /* On mobile, show nested menus as expandable accordion */ @media (max-width: 768px) { /* Mobile submenu styling */ .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu { position: static !important; transform: none !important; box-shadow: none !important; background: transparent !important; margin-top: 0 !important; max-height: 0; overflow: hidden; opacity: 0; visibility: hidden; transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease; padding: 0 !important; border-radius: 0 !important; } /* Expanded state — no internal scroll; parent navMenu scrolls */ .sub-menu.mobile-expanded { max-height: none !important; overflow-y: visible !important; opacity: 1 !important; visibility: visible !important; padding: 8px 0 8px 16px !important; } /* RTL padding adjustment */ [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded, html[lang="ar"] .sub-menu.mobile-expanded { padding: 8px 16px 8px 0 !important; } /* Disable hover behavior on mobile */ .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu { opacity: 0; visibility: hidden; pointer-events: none; } /* Enable visibility for expanded submenus */ .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; } .sub-menu a { padding: 10px 0 !important; display: block !important; font-size: 14px !important; white-space: normal !important; } .sub-menu a:hover { background-color: transparent !important; } /* Parent item wrapper - flex layout with relative positioning for absolute toggle */ .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu) { display: flex !important; flex-wrap: wrap !important; align-items: center !important; position: relative !important; min-height: 44px !important; } /* Parent link - takes full width since toggle is absolute (not a flex child) */ .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { flex: 1 !important; min-width: 0 !important; } /* Normalize menu-group-title in mobile nav to match link alignment */ .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { padding: 0 !important; line-height: inherit !important; } /* Submenu takes full width below parent */ .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu, .navbar li:has(.sub-menu) > .sub-menu { flex-basis: 100% !important; width: 100% !important; } /* HIDE EXISTING CHEVRONS/ARROWS from cloned sites to prevent duplicates */ .nav-menu li:has(.sub-menu) > a .fa-chevron-down, .nav-menu li:has(.sub-menu) > a .fa-angle-down, .nav-menu li:has(.sub-menu) > a [class*="chevron"], .nav-menu li:has(.sub-menu) > a [class*="arrow"], nav li:has(.sub-menu) > a [class*="chevron"], nav li:has(.sub-menu) > a [class*="arrow"], #navMenu li:has(.sub-menu) > a [class*="chevron"], #navMenu li:has(.sub-menu) > a [class*="arrow"] { display: none !important; visibility: hidden !important; } /* Toggle arrow button - flex child that stretches to match nav-link height */ .mobile-submenu-toggle { display: flex !important; align-items: center !important; justify-content: center !important; width: 44px !important; height: auto !important; background: transparent !important; border: none !important; cursor: pointer !important; padding: 0 !important; margin: 0 !important; position: static !important; flex-shrink: 0 !important; align-self: stretch !important; z-index: 2 !important; -webkit-tap-highlight-color: transparent; } .mobile-submenu-toggle::after { content: '' !important; display: block !important; width: 0 !important; height: 0 !important; border-left: 6px solid transparent !important; border-right: 6px solid transparent !important; border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important; } /* Rotate arrow when expanded */ .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; } } /* Hide toggle button on desktop */ @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } } </style> <script id="zappy-mobile-menu-script"> // Mobile menu toggle for nested submenus (including Menu Groups) // Uses separate toggle button - link navigates, arrow toggles submenu (function() { function initMobileMenuToggles() { // Only run on mobile if (window.innerWidth > 768) { // Remove any toggle buttons on desktop document.querySelectorAll('.mobile-submenu-toggle').forEach(btn => btn.remove()); document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => { menu.classList.remove('mobile-expanded'); }); console.log('[MOBILE MENU] Desktop mode - cleanup done'); return; } console.log('[MOBILE MENU] Initializing mobile menu toggles...'); // Find all parent menu items (items with .sub-menu) const menuItemsWithSubmenus = document.querySelectorAll( '.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)' ); console.log('[MOBILE MENU] Found', menuItemsWithSubmenus.length, 'items with submenus'); menuItemsWithSubmenus.forEach(function(li) { // Skip if already has toggle button if (li.querySelector('.mobile-submenu-toggle')) { return; } const submenu = li.querySelector('.sub-menu'); const parentLink = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title'); if (!submenu || !parentLink) return; // Create toggle button const toggleBtn = document.createElement('button'); toggleBtn.className = 'mobile-submenu-toggle'; toggleBtn.setAttribute('aria-label', 'Toggle submenu'); toggleBtn.setAttribute('type', 'button'); // Insert toggle button after the link parentLink.insertAdjacentElement('afterend', toggleBtn); console.log('[MOBILE MENU] Created toggle button for:', parentLink.textContent?.trim()); // Handle toggle button click - only toggles submenu toggleBtn.addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation(); const isExpanded = submenu.classList.contains('mobile-expanded'); // Close all other submenus first document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) { if (menu !== submenu) { menu.classList.remove('mobile-expanded'); const otherToggle = menu.parentElement.querySelector('.mobile-submenu-toggle'); if (otherToggle) otherToggle.classList.remove('expanded'); } }); // Toggle this submenu submenu.classList.toggle('mobile-expanded'); toggleBtn.classList.toggle('expanded'); console.log('[MOBILE MENU] Toggled submenu:', !isExpanded ? 'expanded' : 'collapsed'); }); // Parent link navigates normally - no preventDefault }); } // Initialize on DOM load if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileMenuToggles); } else { initMobileMenuToggles(); } // Re-initialize on window resize (but use debounce to avoid too many calls) let resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileMenuToggles, 250); }); // Also initialize when mobile menu becomes visible // This handles cases where the mobile menu is hidden initially const observer = new MutationObserver(function(mutations) { mutations.forEach(function(mutation) { if (mutation.type === 'attributes' && mutation.attributeName === 'class') { const target = mutation.target; if (target.classList.contains('active') || target.style.display !== 'none') { console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...'); setTimeout(initMobileMenuToggles, 100); } } }); }); // Observe mobile menu containers const mobileMenus = document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu'); mobileMenus.forEach(function(menu) { observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] }); }); })(); </script> <style data-zappy-section-v2-css="true"> /* V2 Regenerated Section CSS */ .index-hero-section { position: relative; width: 100%; min-height: 100vh; display: flex; align-items: center; justify-content: flex-start; overflow: hidden; background-color: var(--bg-dark); color: var(--text-dark); } .index-hero-section .hero-bg-wrapper { position: absolute; inset: 0; z-index: 0; } .index-hero-section .hero-bg-image { position: absolute; inset: 0; width: 100%; height: 100%; background-size: cover; background-position: center; } .index-hero-section .hero-scrim { position: absolute; inset: 0; z-index: 1; background: linear-gradient( 135deg, rgba(47, 41, 36, 0.55) 0%, rgba(47, 41, 36, 0.35) 40%, rgba(47, 41, 36, 0.08) 70%, rgba(47, 41, 36, 0.02) 100% ); pointer-events: none; } .index-hero-section .hero-overlay-group { position: relative; z-index: 10; width: 100%; max-width: 1200px; margin: 0 auto; padding: 120px 48px 80px; display: flex; justify-content: flex-start; align-items: center; } .index-hero-section .hero-text-card { max-width: 580px; background: rgba(247, 242, 234, 0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(221, 210, 196, 0.6); border-radius: 2px; padding: 56px 48px; box-shadow: 0 20px 50px rgba(47, 41, 36, 0.18), 0 8px 24px rgba(47, 41, 36, 0.08); text-align: right; animation: heroCardFadeIn 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) forwards; opacity: 0; transform: translateY(20px); } @keyframes heroCardFadeIn { 0% { opacity: 0; transform: translateY(24px); } 100% { opacity: 1; transform: translateY(0); } } .index-hero-section .hero-headline { font-family: 'Cormorant Garamond', 'Canela', serif; font-size: 3.5rem; font-weight: 300; line-height: 1.15; letter-spacing: 0.005em; color: #2F2924; margin: 0 0 24px 0; text-align: right; } .index-hero-section .hero-subtitle { font-family: 'Cormorant Garamond', 'Canela', serif; font-size: 1.5rem; font-weight: 400; line-height: 1.4; color: #3D342E; margin: 0 0 20px 0; text-align: right; } .index-hero-section .hero-body { font-family: 'Inter', 'Neue Haas Grotesk Text', sans-serif; font-size: 1rem; font-weight: 400; line-height: 1.8; color: #3D342E; margin: 0 0 36px 0; text-align: right; } .index-hero-section .hero-cta-group { display: flex; flex-wrap: wrap; gap: 16px; justify-content: flex-start; flex-direction: row; } .index-hero-section .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-family: 'Inter', 'Neue Haas Grotesk Text', sans-serif; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; border-radius: 2px; padding: 14px 32px; transition: all 0.3s ease; white-space: nowrap; cursor: pointer; border: none; } .index-hero-section .btn-primary { background-color: #8D5B3F; color: #F8F3EB; box-shadow: 0 4px 12px rgba(141, 91, 63, 0.25); } .index-hero-section .btn-primary:hover { background-color: #7A4E36; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(141, 91, 63, 0.35); } .index-hero-section .btn-whatsapp { background-color: #25D366; color: #FFFFFF; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); } .index-hero-section .btn-whatsapp:hover { background-color: #20BD5A; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4); } .index-hero-section .whatsapp-icon { width: 20px; height: 20px; flex-shrink: 0; } @media (max-width: 768px) { .index-hero-section { min-height: 100vh; align-items: flex-end; } .index-hero-section .hero-overlay-group { padding: 100px 16px 32px; justify-content: center; } .index-hero-section .hero-text-card { max-width: 100%; width: 100%; padding: 36px 24px; border-radius: 2px; background: rgba(247, 242, 234, 0.94); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); } .index-hero-section .hero-headline { font-size: 2.5rem; line-height: 1.2; margin-bottom: 16px; } .index-hero-section .hero-subtitle { font-size: 1.25rem; margin-bottom: 14px; } .index-hero-section .hero-body { font-size: 1rem; margin-bottom: 28px; } .index-hero-section .hero-cta-group { flex-direction: column; width: 100%; gap: 12px; } .index-hero-section .btn { width: 100%; justify-content: center; padding: 16px 24px; font-size: 0.9rem; } } /* ZAPPY_POSTGEN_GUARD_HERO_FONT_CAP:index-hero */ .hero h1, .hero-section h1, [class*="hero-"] h1, [class~="hero"] h1, .hero .hero-title, .hero-title { font-size: 48px !important; line-height: 1.2 !important; } @media (max-width: 1024px) { .hero h1, .hero-section h1, [class*="hero-"] h1, [class~="hero"] h1, .hero .hero-title, .hero-title { font-size: 36px !important; } } @media (max-width: 768px) { .hero h1, .hero-section h1, [class*="hero-"] h1, [class~="hero"] h1, .hero .hero-title, .hero-title { font-size: 28px !important; } } </style> 
+  <style id="zappy-critical-above-fold-css">
+html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{box-sizing:inherit}body{margin:0;min-width:320px;overflow-x:clip}img,svg,video{max-width:100%;height:auto}main{display:block}.container{width:min(100% - 32px,1200px);margin-inline:auto}.navbar,nav.navbar,header .navbar,header[role="banner"]{position:relative;z-index:1000;width:100%}.nav-container,.navbar .container{display:flex;align-items:center;justify-content:space-between;min-height:64px}.logo,.logo-link img{display:block;width:35px;height:35px;object-fit:contain}.nav-menu,#navMenu{list-style:none}.fa,.fas,.far,.fab,.fa-solid,.fa-regular,.fa-brands{display:inline-block;min-width:1em;text-align:center}.hero-section,.index-hero-section,section[class*="hero"]{position:relative;overflow:hidden;min-height:560px}.hero-bg-wrapper,.hero-bg-image,section[class*="hero"] [class*="hero-bg"]{position:absolute;inset:0;width:100%;height:100%}.hero-bg-wrapper img,.hero-bg-image img,section[class*="hero"] [data-hero-bg],section[class*="hero"] img[data-hero-background="true"]{width:100%!important;height:100%!important;object-fit:cover!important;display:block}.hero-content,section[class*="hero"] .container{position:relative;z-index:2}@media(max-width:768px){.nav-container,.navbar .container{min-height:60px}.nav-menu,#navMenu{max-width:100vw;overflow-x:hidden}.hero-section,.index-hero-section,section[class*="hero"]{min-height:100svh}}
 </style>
     <link rel="preload" href="/styles.css" as="style">
     <link rel="stylesheet" href="/styles.css" media="print" onload="this.media='all'">
@@ -371,6 +97,9 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
         <!-- Categories will be loaded dynamically -->
       </ul>
     </li>
+  
+
+    
   
 
     
@@ -692,6 +421,12 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{bo
 
     <script src="/script.js"></script>
 
+    <script id="zappy-facebook-pixel-lazy-loader">
+(function(){var pixelIds=["1011549347909087"];if(!pixelIds.length||window.__zappyFacebookPixelLazyLoader)return;window.__zappyFacebookPixelLazyLoader=true;var loaded=false;function load(){if(loaded)return;loaded=true;!function(f,b,e,v,n,t,s){if(f.fbq&&f.fbq.loaded)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');pixelIds.forEach(function(id){try{fbq('init',id);}catch(e){}});try{fbq('track','PageView');}catch(e){}}function schedule(){if('requestIdleCallback'in window){requestIdleCallback(load,{timeout:8000});}else{setTimeout(load,6000);}}['pointerdown','keydown','touchstart','scroll'].forEach(function(evt){window.addEventListener(evt,load,{once:true,passive:true});});schedule();})();
+</script>
+    <script id="zappy-font-awesome-loader">
+(function(){if(window.__zappyFontAwesomeLoader)return;window.__zappyFontAwesomeLoader=true;var href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';function load(){if(document.querySelector('link[href*="font-awesome"][href*="all.min.css"]'))return;var l=document.createElement('link');l.rel='stylesheet';l.href=href;l.crossOrigin='anonymous';l.referrerPolicy='no-referrer';document.head.appendChild(l);}function schedule(){if('requestIdleCallback'in window){requestIdleCallback(load,{timeout:5000});}else{setTimeout(load,3500);}}['pointerdown','keydown','touchstart','mouseover'].forEach(function(evt){window.addEventListener(evt,load,{once:true,passive:true});});schedule();})();
+</script>
 
     <script id="zappy-mobile-submenu-script">
     (function() {
