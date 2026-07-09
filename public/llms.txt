@@ -1,0 +1,274 @@
+# סטודיו 242 - מערכות עיצוב לבית — Generative Engine Optimization Map
+
+> A minimalist, emotionally-driven art and photography brand rooted in the philosophy of Wabi-Sabi — finding beauty in imperfection, stillness, and simplicity. The artist creates photography-based artworks designed to integrate harmoniously into living and working spaces, evoking feeling rather than serving as mere decoration. The brand exudes a quiet, slow, non-commercial presence — like a serene gallery experience — and bridges the worlds of fine art, interior design, and emotional well-being. The visual identity is built around large, powerful images, generous white space, and an atmosphere of calm intentionality.
+
+---
+
+## Pages
+
+### אומנות, טבע ועיצוב בהתאמה אישית
+https://example.com
+סטודיו 242 משלב צילום אמנותי מקורי, אלמנטים מהטבע ופריטי עיצוב נבחרים ליצירת קומפוזיציות ייחודיות לבית ולעסק. כל פרויקט נבנה בהתאמה אישית במטרה להעניק לחלל נוכחות, איזון ואווירה טבעית.
+
+### בהתאמה אישית
+https://example.com/custom-made
+מערכות עיצוב שלמות בהתאמה אישית מבית סטודיו 242. קירות עוגן, שילוב אמנות צילום מקורית, חומרים טבעיים וריהוט — תכנון, הדמיה והעמדה. ייעוץ ראשוני ללא עלות.
+
+### Products
+https://example.com/products
+המוצרים שלנו - סטודיו 242 - מערכות עיצוב לבית
+
+### Cart
+https://example.com/cart
+עגלת הקניות שלך
+
+### Checkout
+https://example.com/checkout
+תשלום
+
+### Login
+https://example.com/login
+התחברות לקוחות
+
+### Account
+https://example.com/account
+החשבון שלי
+
+### Order Success
+https://example.com/order-success
+תודה על ההזמנה
+
+### Product Detail
+https://example.com/product/:slug
+פרטי המוצר - סטודיו 242 - מערכות עיצוב לבית
+
+### Category
+https://example.com/category/:slug
+מוצרים - סטודיו 242 - מערכות עיצוב לבית
+
+### אודות סטודיו 242 — סטודיו 242 - מערכות עיצוב לבית
+https://example.com/about
+היכירו את אופיר מסיקה — צלם אמנות ישראלי שיוצר מתוך שקט, כוונה ויופי של חוסר השלמות. גלו את הפילוסופיה שמאחורי כל יצירה ואת הדרך שהובילה לכאן.
+
+### מוכנים להכניס אמנות לחייכם — אופיר מסיקה
+https://example.com/contact
+רוצים לשלב צילום אמנותי לבית, למשרד או לעסק שלכם? צרו קשר עם אופיר מסיקה לייעוץ אישי, שאלות על קולקציות או התאמה מיוחדת לחלל שלכם.
+
+## Legal & Policy
+
+### Privacy Policy
+https://example.com/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://example.com/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://example.com/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+## Products
+
+**Total active products: 22**
+
+### קיר עוגן HARMONY
+https://example.com/product/kyr-avgn-harmony-e6ubcb
+- Price: 13900.00 ILS
+- Availability: In stock
+- Category: קיר עוגן בהתאמה אישית
+- Description: מערכת עיצוב אדריכלית המעניקה לחלל נוכחות, עומק וזהות. שילוב מדויק של עץ מלא, תאורה, חומרים טבעיים, צמחייה ואמנות מקורית יוצר קיר עוגן מרשים – בין אם כקיר ירוק מודרני, קיר טלוויזיה או מוקד עיצובי מרכזי המגדיר את אופיו של הבית.
+- Image: https://example.com/assets/product-1783363427471-s2exe3b.webp
+
+### Harmony | מערכת עיצוב לקיר הטלוויזיה
+https://example.com/product/harmony-markt-aytsvb-lkyr-htlvvyzyh-00on7l
+- Price: 9450.00 ILS
+- Availability: In stock
+- Category: מערכות עיצוב מוכנות
+- Description: Harmony היא מערכת עיצוב שלמה שהופכת את קיר הטלוויזיה למוקד אדריכלי רגוע ומדויק. שילוב של עץ טבעי, אמנות מקורית, תאורה נסתרת וחומרים טבעיים יוצר חלל שמרגיש שלם, חם ועל-זמני – בלי צורך בשיפוץ
+- Image: https://example.com/assets/product-1783256563310-onkeof.webp
+
+### מערכת עיצוב לכניסה | Natural Entry 140
+https://example.com/product/markt-aytsvb-lknysh-natural-entry-140-dejdta
+- Price: 6900.00 ILS
+- Availability: In stock
+- Category: מערכות עיצוב מוכנות
+- Description: מערכת עיצוב שלמה לכניסה לבית, המשלבת קונסולה מעץ מלא וברזל, סט מדפי עץ עם תאורה נסתרת, גוף תאורה מבמבוק וראטן, עבודת אמנות מקורית בהתאמה אישית וכלי חרס טבעיים. פתרון עיצוב הרמוני ומוכן להתקנה, בהתאמה לחלל שלכם.
+- Image: https://example.com/assets/product-1783242300926-4bfvi.webp
+
+### קונסולת עץ מלא, ברזל שחור מעוצב ונוכחות מרשימה
+https://example.com/product/kvnsvlt-ats-mla-brzl-shchvr-mavtsb-vnvkchvt-mrshymh-qefbhx
+- Price: 3290.00 ILS
+- Availability: In stock
+- Category: פריטי עיצוב משלימים
+- Description: קונסולה בעבודת יד המשלבת פלטת עץ מלא עם רגלי ברזל דקות ומעוצבות, ליצירת פריט על-זמני שמתאים לכניסה לבית, לפינת אוכל, לסלון או לחלל עסקי. זמינה בשני גדלים – 140 ס"מ או 180 ס"מ, ומיוצרת בהזמנה אישית.
+- Image: https://example.com/assets/product-1783247500556-2rzon.webp
+
+### Dining Wall Set | מערכת עיצוב קיר לפינת אוכל
+https://example.com/product/dining-wall-set-markt-aytsvb-kyr-lpynt-avkl-c0ppz7
+- Price: 3950.00 ILS
+- Availability: In stock
+- Category: מערכות עיצוב מוכנות
+- Description: סט עיצוב לקיר פינת האוכל המשלב מדף עץ טבעי, יצירת אמנות ממוסגרת ותכנון קומפוזיציה מדויק ליצירת חלל חם, אלגנטי ומזמין. הפתרון המושלם להפוך את קיר פינת האוכל למוקד עיצובי שמעשיר את חוויית האירוח והישיבה סביב השולחן
+- Image: https://example.com/assets/product-1783076582108-61p7nk.webp
+
+### Wall Set | סט קיר מאוזן
+https://example.com/product/wall-set-st-kyr-mavzn-osztht
+- Price: 2290.00 ILS
+- Availability: In stock
+- Category: מערכות עיצוב מוכנות
+- Description: Wall Set | סט קיר מאוזן סט עיצוב לקיר המשלב שני מדפי עץ אלון מלא, יצירת אמנות ממוסגרת בהתאמה אישית ותכנון קומפוזיציה מדויק ליצירת קיר חם, מאוזן ועל־זמני. פתרון מושלם לשדרוג הסלון, פינת הישיבה או כל קיר מרכזי בבית – ללא צורך בפרויקט עיצוב שלם.
+- Image: https://example.com/assets/product-1783073430169-qymm3.webp
+
+### מערכת קיר מרכזי  Tv Balance
+https://example.com/product/markt-kyr-mrkzy-tv-balance-nmovsc
+- Price: 6950.00 ILS
+- Availability: In stock
+- Category: מערכות עיצוב מוכנות
+- Description: סט קיר טלוויזיה המשלב נגרות עץ טבעי, יצירת אמנות ותכנון מוקפד ליצירת קיר מאוזן, נקי ועל-זמני. הסט כולל יחידת עץ מינימליסטית, יצירת אמנות לבחירה ותכנון קומפוזיציה מלא. ניתן לשדרג לקונסולה בהתאמה אישית עם מגירות, אחסון ופתרונות נגרות לפי החלל.
+- Image: https://example.com/assets/product-1783072785171-bkx4w8.webp
+
+### Between 03- Passage I
+https://example.com/product/between-03-passage-i-r9ouii
+- Price: 1190.00 ILS
+- Availability: In stock
+- Category: Between  - nature reveals itself
+- Description: ענף טבעי ועלה מיובש נפגשים ביצירה מינימליסטית החוקרת את המעבר שבין חומר לריק, בין תנועה לשקט. שילוב של צילום אמנותי ועיבוד עכשווי יוצר עבודה אלגנטית, על־זמנית ובעלת נוכחות שקטה.
+- Image: https://example.com/assets/product-1782642370156-ffd3k.webp
+
+### Between 01 - Stillness I
+https://example.com/product/between-01-stillness-i-cir62t
+- Price: 1190.00 ILS
+- Availability: In stock
+- Category: Between  - nature reveals itself
+- Description: ענף טבעי החושף את יופיו מתוך שכבות של אור וצל, ביצירה מינימליסטית המשלבת צילום אמנותי עם עיבוד עכשווי. קומפוזיציה שקטה ובעלת נוכחות, המכניסה לחלל תחושת איזון, עומק וחיבור לטבע.
+- Image: https://example.com/assets/product-1782637627432-ijp3c.webp
+
+### Between 02 - Quiet Growth 
+https://example.com/product/between-02-quiet-growth-zhnv9l
+- Price: 1190.00 ILS
+- Availability: In stock
+- Category: Between  - nature reveals itself
+- Description: ענף עדין המתגלה מתוך שכבות של אור וצל, ביצירה מינימליסטית המשלבת צילום אמנותי עם עיבוד עכשווי. עבודה שקטה, אלגנטית ועל־זמנית, המוסיפה עומק ורוגע לחלל.
+- Image: https://example.com/assets/product-1782636311651-dsi1fb.webp
+
+### פיסת טבע מהגליל | מארז אווירה 
+https://example.com/product/pyst-tba-mhglyl-marz-avvyrh-g99hog
+- Price: 290.00 ILS (sale, was 330.00 ILS)
+- Availability: In stock
+- Category: מארזים ומתנות מהטבע
+- Description: מארז מתנה מעוצב המשלב הדפס אמנותי מקורי מבית Studio 242, עץ שפע חי, סט כלי טרקוטה במארז עוצבו במיוחד עבור קולקציית "פיסת טבע מהגליל" ויוצרים יחד שפה חומרית אחידה של אדמה, צמיחה ואור. משלבים צמח סוקולנט ונר טבעי ארומטי בעבודת יד. זהו אוסף פריטים יחודי שנבחרו ליצור פינה של שקט, השראה וחיבור לטבע הגלילי,
+- Image: https://example.com/assets/product-1782293400088-ixfkt.webp
+
+### קיר עוגן ירוק | ספסל עץ אלון, מדפי עץ, אמנות בוטנית ועץ שתול
+https://example.com/product/kyr-avgn-yrvk-spsl-ats-alvn-mdpy-ats-amnvt-bvtnyt-vats-shtvl-syz8r0
+- Price: 5950.00 ILS
+- Availability: In stock
+- Category: קיר עוגן בהתאמה אישית
+- Description: מערכת עיצוב שלמה המשלבת טבע, אמנות וחומרים טבעיים ליצירת מוקד מרשים ומרגיע בחלל.
+- Image: https://example.com/assets/product-1782224744875-o7jvn.webp
+
+### מערכת כניסה | Wall Set | ספסל עץ ובטון | Studio 242
+https://example.com/product/markt-knysh-wall-set-spsl-ats-vbtvn-studio-242-qfw9un
+- Price: 4800.00 ILS
+- Availability: In stock
+- Category: מערכות עיצוב מוכנות
+- Description: קומפוזיציה עיצובית שלמה, מתאימה מאוד לכניסה לבית או למרחב אירוח. המערכת משלבת ספסל עץ אלון ורגלי בטון, כד מינרלי עם עץ זית והדפס אומנותי ממוסגר, ליצירת פינה שקטה, טבעית ועל-זמנית. המערכת נועדה להכניס לחלל תחושת רוגע, חיבור לאדמה ואסתטיקה טבעית בסגנון Wabi-Sabi ו-Biophilic Design.
+- Image: https://example.com/assets/product-1782122958021-2pspl9.webp
+
+### ספסל עץ אלון ורגלי בטון | סדרת פינת עוגן – Studio 242
+https://example.com/product/spsl-ats-alvn-vrgly-btvn-sdrt-pynt-avgn-studio-242-rlpv3s
+- Price: 2900.00 ILS
+- Availability: In stock
+- Category: פריטי עיצוב משלימים
+- Description: ספסל מעוצב המשלב משטח עץ אלון טבעי עם רגלי בטון בגימור מינרלי, ליצירת נוכחות שקטה, טבעית ועל-זמנית. מתאים לכניסת הבית, סלון, חללי אירוח, קליניקות, בתי קפה ומרחבי אירוח המחפשים חמימות חומרית ואסתטיקה של Wabi-Sabi.
+- Image: https://example.com/assets/product-1782122395330-ymy82.webp
+
+### שקט לבן | White Serenity Collection
+https://example.com/product/shkt-lbn-white-serenity-collection-apg3ta
+- Price: 1890.00 ILS
+- Availability: In stock
+- Category: צילום אומנותי - פיין ארט
+- Description: סדרת הדפסים רגועה לחללים של שלווה, איזון ונשימה. סדרת שקט לבן נולדה מתוך הרצון ליצור חלל שמאט את הקצב ומאפשר לנשום. גוונים בהירים, אלמנטים בוטניים ונופים רכים משתלבים בהרמוניה ליצירת אווירה של רוגע, ניקיון ואיזון. הסדרה מתאימה במיוחד לחדרי טיפול, קליניקות, ספא, חדרי שינה, פינות מדיטציה וחללים המבקשים להעניק תחושת שקט, נינוחות והתחדשות.
+- Image: https://example.com/assets/product-1782055356802-l3giob.webp
+
+### William Morris | Botanical Collection
+https://example.com/product/william-morris-botanical-collection-9wyctw
+- Price: 1790.00 ILS
+- Availability: In stock
+- Category: צילום אומנותי - פיין ארט
+- Description: סדרה בוטנית בהשראת יצירותיו של ויליאם מוריס | הדפס אמנות ממוסגר סדרת הדפסים בוטניים אלגנטית בהשראת שפת העיצוב של ויליאם מוריס – שילוב של טבע, דוגמאות צמחיות ויופי על-זמני. ההדפסים ממוסגרים במסגרת עץ בהירה עם פספרטו לבן, ומעניקים לחלל תחושה של רוגע, טבע ואסתטיקה אירופאית קלאסית.
+- Image: https://example.com/assets/product-1782054857312-x2qo8.webp
+
+### סדרת Nature in Focus | שלישיית הדפסי טבע אמנותיים – 100×70 ס"מ
+https://example.com/product/sdrt-nature-in-focus-shlyshyyt-hdpsy-tba-amnvtyym-10070-sm-9ka7z4
+- Price: 2990.00 ILS
+- Availability: In stock
+- Category: צילום אומנותי - פיין ארט
+- Description: שלישיית צילומי טבע מקוריים במהדורה אמנותית, המכניסה לחלל שקט, עומק וחיבור לטבע. כל יצירה מודפסת בגודל 100×70 ס"מ, ממוסגרת במסגרת עץ בהירה וכוללת פספרטו איכותי למראה אלגנטי ועל-זמני.
+- Image: https://example.com/assets/product-1781693359525-owmu8e.webp
+
+### בוצ'ר עץ אלון מלא צף | Live Edge | רוחב 30 ס"מ | עובי כ-4 ס"מ | 120 / 140 / 180 ס"מ
+https://example.com/product/bvtsr-ats-alvn-mla-tsp-live-edge-rvchb-30-sm-avby-k-4-sm-120-140-180-sm-kcszcx
+- Price: 990.00 ILS
+- Availability: In stock
+- Category: פריטי עיצוב משלימים
+- Description: בוצ'ר עץ אלון מלא בעיצוב טבעי וייחודי, בעל קצה אורגני (Live Edge), רוחב כ-30 ס"מ ועובי מרשים של כ-4 ס"מ. מגיע עם מערכת תלייה נסתרת ופירזול צף המותקן מתחת למדף, ליצירת מראה נקי, מרחף ומינימליסטי. מתאים לסלון, לפינת אוכל, לכניסה לבית, לחדר שינה, לקליניקות ולעסקים המעוצבים בסגנון טבעי ועכשווי.
+- Image: https://example.com/assets/product-1781691147794-7p69x.webp
+
+### ספסל עץ מלא טבעי Live Edge | 150×32 ס"מ | ספסל מעוצב לבית ולעסק
+https://example.com/product/spsl-ats-mla-tbay-live-edge-15032-sm-spsl-mavtsb-lbyt-vlask-b9obmu
+- Price: 1800.00 ILS
+- Availability: In stock
+- Category: פריטי עיצוב משלימים
+- Description: ספסל עץ מלא בעיצוב טבעי וייחודי, המשלב גידים עשירים, קצה אורגני (Live Edge) ורגלי ברזל מינימליסטיות. פריט רב-שימושי המכניס חמימות, חומריות טבעית ונוכחות שקטה לחלל, ומתאים לכניסה לבית, לסלון, לחדר שינה, לפינות טבע, לובאים ועסקים מעוצבים.
+- Image: https://example.com/assets/product-1781687337132-u24cq4b.webp
+
+### קיר עוגן מעוצב בהתאמה אישית
+https://example.com/product/kyr-avgn-mavtsb-bhtamh-ayshyt-2sewz8
+- Price: 5500.00 ILS
+- Availability: In stock
+- Category: קיר עוגן בהתאמה אישית
+- Description: יצירת מוקד עיצובי מרשים לבית ולעסק, המשלב אמנות, חומרים טבעיים וסטיילינג מוקפד בהתאמה מלאה לחלל.
+- Image: https://example.com/assets/product-1781623146776-wtu9jp.webp
+
+### סדרת אדמה ושקט | Earth & Silence
+https://example.com/product/sdrt-admh-vshkt-earth-silence-k2bbpf
+- Price: 1190.00 ILS
+- Availability: In stock
+- Category: צילום אומנותי - פיין ארט
+- Description: טריפטיך אומנותי המורכב משלושה הדפסים מקוריים בהשראת אור, טבע וחומר.
+- Image: https://example.com/assets/product-1782727001363-3j6u4e.webp
+
+### פינת טבע מעוצבת לבית ולעסק
+https://example.com/product/pynt-tba-mavtsbt-lbyt-vlask-w7we7b
+- Price: 1800.00 ILS
+- Availability: In stock
+- Category: מערכות עיצוב מוכנות
+- Description: פינת טבע – Earth & Silence קומפוזיציה מעוצבת הכוללת הדפס אומנותי בסגנון ים־תיכוני, מסגרת בהירה וכד קרמי בגימור טבעי, ליצירת פינת עיצוב שקטה, חמימה ועל־זמנית. הפינה מתאימה לסלון, פינת אוכל, משרד, קליניקה, חדר אירוח וחללי קבלה, ומשלבת בין אומנות, טקסטורות טבעיות ואסתטיקה מינימליסטית המשתלבת בקלות בכל סגנון עיצוב.
+- Image: https://example.com/assets/product-1783175866639-8utgkn.webp
+
+---
+
+# Business Context (for LLM understanding)
+
+## About סטודיו 242 - מערכות עיצוב לבית
+A minimalist, emotionally-driven art and photography brand rooted in the philosophy of Wabi-Sabi — finding beauty in imperfection, stillness, and simplicity. The artist creates photography-based artworks designed to integrate harmoniously into living and working spaces, evoking feeling rather than serving as mere decoration. The brand exudes a quiet, slow, non-commercial presence — like a serene gallery experience — and bridges the worlds of fine art, interior design, and emotional well-being. The visual identity is built around large, powerful images, generous white space, and an atmosphere of calm intentionality.
+
+## Target Audience
+אנשים שאוהבים עיצוב פנים, אדריכלים ומעצבי פנים, בעלי עסקים קטנים (קליניקות, בתי קפה, חללים אינטימיים), אנשים המחפשים עומק ומשמעות בבית או בעסק
+
+## Industry
+אמנות וצילום
+
+---
+
+# Machine-readable feeds
+
+- Sitemap (XML): https://example.com/sitemap.xml
+- Robots: https://example.com/robots.txt
+- Flattened page text (for LLMs): https://example.com/llms-full.txt
+- Products (JSON): https://example.com/products.json
+- Products (Google Merchant RSS): https://example.com/product-feed.xml
