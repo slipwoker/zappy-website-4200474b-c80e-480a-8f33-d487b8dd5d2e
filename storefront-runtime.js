@@ -1193,6 +1193,8 @@ window.onload = function() {
 ;
 
 ;
+
+;
 /* ==ZAPPY E-COMMERCE JS START== */
 // E-commerce functionality
 (function() {
@@ -8713,7 +8715,7 @@ function stripHtmlToText(html) {
         document.getElementById('cart-items') ||
         document.getElementById('order-success') ||
         document.getElementById('product-detail') ||
-        document.getElementById('category-products') ||
+        document.getElementById('zappy-category-products') ||
         document.querySelector('.cart-page,.checkout-page,.order-success-page,.product-detail-page')
       );
   }
@@ -9755,7 +9757,7 @@ function refreshDynamicProductGridsAfterDiscount() {
     loadFeaturedProducts();
   }
 
-  if (document.getElementById('category-products')) {
+  if (document.getElementById('zappy-category-products')) {
     if (typeof catProductsCache !== 'undefined' && catProductsCache && catProductsCache.length > 0 && typeof applyCategoryFiltersAndRender === 'function') {
       applyCategoryFiltersAndRender(null, t);
     } else if (typeof loadCategoryPage === 'function' && document.getElementById('category-page')) {
@@ -10698,7 +10700,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       
       // If we're on a category page, refresh it
-      var categorySection = document.getElementById('category-products');
+      var categorySection = document.getElementById('zappy-category-products');
       if (categorySection) {
         loadCategoryPage();
       }
@@ -10862,7 +10864,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function shouldFetchAdditionalJsSettingsOnBoot() {
   return !!(
     document.getElementById('product-detail') ||
-    document.getElementById('category-products') ||
+    document.getElementById('zappy-category-products') ||
     document.getElementById('zappy-product-grid') ||
     document.getElementById('cart-items') ||
     document.getElementById('checkout-form') ||
