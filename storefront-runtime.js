@@ -1189,6 +1189,8 @@ window.onload = function() {
 ;
 
 ;
+
+;
 /* ==ZAPPY E-COMMERCE JS START== */
 // E-commerce functionality
 (function() {
@@ -9279,8 +9281,8 @@ function appendStorefrontQuery(path, query) {
 let additionalJsProductLayout = 'standard';
 let additionalJsSettingsFetched = false;
 let additionalJsSettingsPromise = null;
-let additionalJsAllProductsLabel = null;
-let additionalJsProductsMenuLabel = null;
+var additionalJsAllProductsLabel = null;
+var additionalJsProductsMenuLabel = null;
 let additionalJsShowAllProductsSubmenu = true;
 let additionalJsShowStockStatus = true;
 let additionalJsSidebarFiltersConfig = {};
@@ -15721,6 +15723,7 @@ function fixContrast(){
     var lang = (typeof getCurrentLanguage === 'function' ? getCurrentLanguage() : null) || document.documentElement.lang || '';
     return ['he','iw','ar','fa','ur'].indexOf(lang.split('-')[0].toLowerCase()) !== -1;
   }
+
   function fix() {
     try {
       if (isRTLPage()) {
