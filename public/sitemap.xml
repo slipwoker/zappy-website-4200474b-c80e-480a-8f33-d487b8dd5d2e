@@ -1,223 +1,223 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://example.com</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://example.com/custom-made</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/custom-made</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/products</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/products</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/cart</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/cart</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/checkout</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/checkout</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/login</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/login</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/account</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/account</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/order-success</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/order-success</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/product/:slug</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/product/:slug</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/category/:slug</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/category/:slug</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/about</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/about</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/contact</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/contact</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/privacy</loc>
-    <lastmod>2026-07-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://example.com/terms</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/privacy</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.com/accessibility</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/terms</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.com/product/kyr-avgn-harmony-e6ubcb</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/accessibility</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://studio242-home-design-systems.zappy5.app/product/kyr-avgn-harmony-e6ubcb</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/product/harmony-markt-aytsvb-lkyr-htlvvyzyh-00on7l</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/product/harmony-markt-aytsvb-lkyr-htlvvyzyh-00on7l</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/product/markt-aytsvb-lknysh-natural-entry-140-dejdta</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/product/markt-aytsvb-lknysh-natural-entry-140-dejdta</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/product/kvnsvlt-ats-mla-brzl-shchvr-mavtsb-vnvkchvt-mrshymh-qefbhx</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/product/kvnsvlt-ats-mla-brzl-shchvr-mavtsb-vnvkchvt-mrshymh-qefbhx</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/product/dining-wall-set-markt-aytsvb-kyr-lpynt-avkl-c0ppz7</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/product/dining-wall-set-markt-aytsvb-kyr-lpynt-avkl-c0ppz7</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/product/wall-set-st-kyr-mavzn-osztht</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/product/wall-set-st-kyr-mavzn-osztht</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/product/markt-kyr-mrkzy-tv-balance-nmovsc</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/product/markt-kyr-mrkzy-tv-balance-nmovsc</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/product/between-03-passage-i-r9ouii</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/product/between-03-passage-i-r9ouii</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/product/between-01-stillness-i-cir62t</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/product/between-01-stillness-i-cir62t</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/product/between-02-quiet-growth-zhnv9l</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/product/between-02-quiet-growth-zhnv9l</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/product/pyst-tba-mhglyl-marz-avvyrh-g99hog</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/product/pyst-tba-mhglyl-marz-avvyrh-g99hog</loc>
     <lastmod>2026-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/product/kyr-avgn-yrvk-spsl-ats-alvn-mdpy-ats-amnvt-bvtnyt-vats-shtvl-syz8r0</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/product/kyr-avgn-yrvk-spsl-ats-alvn-mdpy-ats-amnvt-bvtnyt-vats-shtvl-syz8r0</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/product/markt-knysh-wall-set-spsl-ats-vbtvn-studio-242-qfw9un</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/product/markt-knysh-wall-set-spsl-ats-vbtvn-studio-242-qfw9un</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/product/spsl-ats-alvn-vrgly-btvn-sdrt-pynt-avgn-studio-242-rlpv3s</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/product/spsl-ats-alvn-vrgly-btvn-sdrt-pynt-avgn-studio-242-rlpv3s</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/product/shkt-lbn-white-serenity-collection-apg3ta</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/product/shkt-lbn-white-serenity-collection-apg3ta</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/product/william-morris-botanical-collection-9wyctw</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/product/william-morris-botanical-collection-9wyctw</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/product/sdrt-nature-in-focus-shlyshyyt-hdpsy-tba-amnvtyym-10070-sm-9ka7z4</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/product/sdrt-nature-in-focus-shlyshyyt-hdpsy-tba-amnvtyym-10070-sm-9ka7z4</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/product/bvtsr-ats-alvn-mla-tsp-live-edge-rvchb-30-sm-avby-k-4-sm-120-140-180-sm-kcszcx</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/product/bvtsr-ats-alvn-mla-tsp-live-edge-rvchb-30-sm-avby-k-4-sm-120-140-180-sm-kcszcx</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/product/spsl-ats-mla-tbay-live-edge-15032-sm-spsl-mavtsb-lbyt-vlask-b9obmu</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/product/spsl-ats-mla-tbay-live-edge-15032-sm-spsl-mavtsb-lbyt-vlask-b9obmu</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/product/kyr-avgn-mavtsb-bhtamh-ayshyt-2sewz8</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/product/kyr-avgn-mavtsb-bhtamh-ayshyt-2sewz8</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/product/sdrt-admh-vshkt-earth-silence-k2bbpf</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/product/sdrt-admh-vshkt-earth-silence-k2bbpf</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/product/pynt-tba-mavtsbt-lbyt-vlask-w7we7b</loc>
+    <loc>https://studio242-home-design-systems.zappy5.app/product/pynt-tba-mavtsbt-lbyt-vlask-w7we7b</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

@@ -1,7 +1,7 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-09T07:26:22.363Z",
-  "base_url": "https://example.com",
+  "generated_at": "2026-07-09T07:26:51.919Z",
+  "base_url": "https://studio242-home-design-systems.zappy5.app",
   "currency": "ILS",
   "count": 22,
   "products": [
@@ -19,14 +19,14 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1783363427471-s2exe3b.webp",
-        "https://example.com/assets/product-1783324404914-2ia135.webp",
-        "https://example.com/assets/product-1783324412386-u88txb.webp",
-        "https://example.com/assets/product-1783324419132-7znvvn.webp"
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783363427471-s2exe3b.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783324404914-2ia135.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783324412386-u88txb.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783324419132-7znvvn.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/kyr-avgn-harmony-e6ubcb",
+      "url": "https://studio242-home-design-systems.zappy5.app/product/kyr-avgn-harmony-e6ubcb",
       "categories": [
         "קיר עוגן בהתאמה אישית",
         "מערכות עיצוב מוכנות"
@@ -47,13 +47,13 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1783256563310-onkeof.webp",
-        "https://example.com/assets/product-1783256570824-6mbk1.webp",
-        "https://example.com/assets/product-1783256578822-9kwcnh.webp"
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783256563310-onkeof.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783256570824-6mbk1.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783256578822-9kwcnh.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/harmony-markt-aytsvb-lkyr-htlvvyzyh-00on7l",
+      "url": "https://studio242-home-design-systems.zappy5.app/product/harmony-markt-aytsvb-lkyr-htlvvyzyh-00on7l",
       "categories": [
         "מערכות עיצוב מוכנות",
         "קיר עוגן בהתאמה אישית"
@@ -74,13 +74,13 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1783242300926-4bfvi.webp",
-        "https://example.com/assets/product-1783242284323-kmcpuj.webp",
-        "https://example.com/assets/product-1783242293215-c57yul.webp"
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783242300926-4bfvi.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783242284323-kmcpuj.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783242293215-c57yul.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/markt-aytsvb-lknysh-natural-entry-140-dejdta",
+      "url": "https://studio242-home-design-systems.zappy5.app/product/markt-aytsvb-lknysh-natural-entry-140-dejdta",
       "categories": [
         "מערכות עיצוב מוכנות"
       ],
@@ -100,14 +100,14 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1783247500556-2rzon.webp",
-        "https://example.com/assets/product-1783247521214-3rd5ad.webp",
-        "https://example.com/assets/product-1783247528428-xatbqu.webp",
-        "https://example.com/assets/product-1783247554315-rubq3v.webp"
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783247500556-2rzon.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783247521214-3rd5ad.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783247528428-xatbqu.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783247554315-rubq3v.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/kvnsvlt-ats-mla-brzl-shchvr-mavtsb-vnvkchvt-mrshymh-qefbhx",
+      "url": "https://studio242-home-design-systems.zappy5.app/product/kvnsvlt-ats-mla-brzl-shchvr-mavtsb-vnvkchvt-mrshymh-qefbhx",
       "categories": [
         "פריטי עיצוב משלימים"
       ],
@@ -127,13 +127,13 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1783076582108-61p7nk.webp",
-        "https://example.com/assets/product-1783076589514-dc89yp.webp",
-        "https://example.com/assets/product-1783076597330-czfdm.webp"
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783076582108-61p7nk.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783076589514-dc89yp.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783076597330-czfdm.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/dining-wall-set-markt-aytsvb-kyr-lpynt-avkl-c0ppz7",
+      "url": "https://studio242-home-design-systems.zappy5.app/product/dining-wall-set-markt-aytsvb-kyr-lpynt-avkl-c0ppz7",
       "categories": [
         "מערכות עיצוב מוכנות"
       ],
@@ -153,12 +153,12 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1783073430169-qymm3.webp",
-        "https://example.com/assets/product-1783073867732-nx0y14.webp"
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783073430169-qymm3.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783073867732-nx0y14.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/wall-set-st-kyr-mavzn-osztht",
+      "url": "https://studio242-home-design-systems.zappy5.app/product/wall-set-st-kyr-mavzn-osztht",
       "categories": [
         "מערכות עיצוב מוכנות"
       ],
@@ -178,14 +178,14 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1783072785171-bkx4w8.webp",
-        "https://example.com/assets/product-1783072985743-g7332.webp",
-        "https://example.com/assets/product-1783174547995-vdmqrj.webp",
-        "https://example.com/assets/product-1783174554924-cpm5xn.webp"
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783072785171-bkx4w8.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783072985743-g7332.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783174547995-vdmqrj.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783174554924-cpm5xn.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/markt-kyr-mrkzy-tv-balance-nmovsc",
+      "url": "https://studio242-home-design-systems.zappy5.app/product/markt-kyr-mrkzy-tv-balance-nmovsc",
       "categories": [
         "מערכות עיצוב מוכנות"
       ],
@@ -205,14 +205,14 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1782642370156-ffd3k.webp",
-        "https://example.com/assets/product-1782643066461-dzcxjb.webp",
-        "https://example.com/assets/product-1782643083674-xzbj19.webp",
-        "https://example.com/assets/product-1782643099727-2b0z18.webp"
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782642370156-ffd3k.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782643066461-dzcxjb.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782643083674-xzbj19.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782643099727-2b0z18.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/between-03-passage-i-r9ouii",
+      "url": "https://studio242-home-design-systems.zappy5.app/product/between-03-passage-i-r9ouii",
       "categories": [
         "Between  - nature reveals itself",
         "צילום אומנותי - פיין ארט"
@@ -233,13 +233,13 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1782637627432-ijp3c.webp",
-        "https://example.com/assets/product-1782638070066-ioj55.webp",
-        "https://example.com/assets/product-1782638122978-snm2z9.webp"
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782637627432-ijp3c.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782638070066-ioj55.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782638122978-snm2z9.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/between-01-stillness-i-cir62t",
+      "url": "https://studio242-home-design-systems.zappy5.app/product/between-01-stillness-i-cir62t",
       "categories": [
         "Between  - nature reveals itself",
         "צילום אומנותי - פיין ארט"
@@ -260,13 +260,13 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1782636311651-dsi1fb.webp",
-        "https://example.com/assets/product-1782644219023-d6ei0i.webp",
-        "https://example.com/assets/product-1782636348209-yysxn0a.webp"
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782636311651-dsi1fb.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782644219023-d6ei0i.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782636348209-yysxn0a.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/between-02-quiet-growth-zhnv9l",
+      "url": "https://studio242-home-design-systems.zappy5.app/product/between-02-quiet-growth-zhnv9l",
       "categories": [
         "Between  - nature reveals itself",
         "צילום אומנותי - פיין ארט"
@@ -287,13 +287,13 @@
       "sale_price": 290,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1782293400088-ixfkt.webp",
-        "https://example.com/assets/product-1782294069879-1c6ijo.webp",
-        "https://example.com/assets/product-1782294078499-0vb08.webp"
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782293400088-ixfkt.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782294069879-1c6ijo.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782294078499-0vb08.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/pyst-tba-mhglyl-marz-avvyrh-g99hog",
+      "url": "https://studio242-home-design-systems.zappy5.app/product/pyst-tba-mhglyl-marz-avvyrh-g99hog",
       "categories": [
         "מארזים ומתנות מהטבע"
       ],
@@ -313,13 +313,13 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1782224744875-o7jvn.webp",
-        "https://example.com/assets/product-1782224638920-xrx6ld.webp",
-        "https://example.com/assets/product-1782224762334-2anwzq.webp"
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782224744875-o7jvn.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782224638920-xrx6ld.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782224762334-2anwzq.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/kyr-avgn-yrvk-spsl-ats-alvn-mdpy-ats-amnvt-bvtnyt-vats-shtvl-syz8r0",
+      "url": "https://studio242-home-design-systems.zappy5.app/product/kyr-avgn-yrvk-spsl-ats-alvn-mdpy-ats-amnvt-bvtnyt-vats-shtvl-syz8r0",
       "categories": [
         "קיר עוגן בהתאמה אישית",
         "מערכות עיצוב מוכנות"
@@ -340,13 +340,13 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1782122958021-2pspl9.webp",
-        "https://example.com/assets/product-1782122973161-cb5x7.webp",
-        "https://example.com/assets/product-1782122980482-r8gcq5.webp"
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782122958021-2pspl9.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782122973161-cb5x7.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782122980482-r8gcq5.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/markt-knysh-wall-set-spsl-ats-vbtvn-studio-242-qfw9un",
+      "url": "https://studio242-home-design-systems.zappy5.app/product/markt-knysh-wall-set-spsl-ats-vbtvn-studio-242-qfw9un",
       "categories": [
         "מערכות עיצוב מוכנות"
       ],
@@ -366,13 +366,13 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1782122395330-ymy82.webp",
-        "https://example.com/assets/product-1782122402890-twgpzm.webp",
-        "https://example.com/assets/product-1782122410788-vhr3wa.webp"
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782122395330-ymy82.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782122402890-twgpzm.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782122410788-vhr3wa.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/spsl-ats-alvn-vrgly-btvn-sdrt-pynt-avgn-studio-242-rlpv3s",
+      "url": "https://studio242-home-design-systems.zappy5.app/product/spsl-ats-alvn-vrgly-btvn-sdrt-pynt-avgn-studio-242-rlpv3s",
       "categories": [
         "פריטי עיצוב משלימים"
       ],
@@ -392,12 +392,12 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1782055356802-l3giob.webp",
-        "https://example.com/assets/product-1782055583262-xpnss.webp"
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782055356802-l3giob.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782055583262-xpnss.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/shkt-lbn-white-serenity-collection-apg3ta",
+      "url": "https://studio242-home-design-systems.zappy5.app/product/shkt-lbn-white-serenity-collection-apg3ta",
       "categories": [
         "צילום אומנותי - פיין ארט"
       ],
@@ -417,13 +417,13 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1782054857312-x2qo8.webp",
-        "https://example.com/assets/product-1782054864067-kb8w4c.webp",
-        "https://example.com/assets/product-1782054871525-7hqox.webp"
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782054857312-x2qo8.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782054864067-kb8w4c.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782054871525-7hqox.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/william-morris-botanical-collection-9wyctw",
+      "url": "https://studio242-home-design-systems.zappy5.app/product/william-morris-botanical-collection-9wyctw",
       "categories": [
         "צילום אומנותי - פיין ארט"
       ],
@@ -443,12 +443,12 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1781693359525-owmu8e.webp",
-        "https://example.com/assets/product-1781693399036-iom7m2.webp"
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1781693359525-owmu8e.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1781693399036-iom7m2.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/sdrt-nature-in-focus-shlyshyyt-hdpsy-tba-amnvtyym-10070-sm-9ka7z4",
+      "url": "https://studio242-home-design-systems.zappy5.app/product/sdrt-nature-in-focus-shlyshyyt-hdpsy-tba-amnvtyym-10070-sm-9ka7z4",
       "categories": [
         "צילום אומנותי - פיין ארט"
       ],
@@ -468,13 +468,13 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1781691147794-7p69x.webp",
-        "https://example.com/assets/product-1781691157467-m1wdx.webp",
-        "https://example.com/assets/product-1781691401697-34yf0l.webp"
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1781691147794-7p69x.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1781691157467-m1wdx.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1781691401697-34yf0l.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/bvtsr-ats-alvn-mla-tsp-live-edge-rvchb-30-sm-avby-k-4-sm-120-140-180-sm-kcszcx",
+      "url": "https://studio242-home-design-systems.zappy5.app/product/bvtsr-ats-alvn-mla-tsp-live-edge-rvchb-30-sm-avby-k-4-sm-120-140-180-sm-kcszcx",
       "categories": [
         "פריטי עיצוב משלימים"
       ],
@@ -494,13 +494,13 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1781687337132-u24cq4b.webp",
-        "https://example.com/assets/product-1781687346080-koogk.webp",
-        "https://example.com/assets/product-1781687355325-xm8qps.webp"
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1781687337132-u24cq4b.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1781687346080-koogk.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1781687355325-xm8qps.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/spsl-ats-mla-tbay-live-edge-15032-sm-spsl-mavtsb-lbyt-vlask-b9obmu",
+      "url": "https://studio242-home-design-systems.zappy5.app/product/spsl-ats-mla-tbay-live-edge-15032-sm-spsl-mavtsb-lbyt-vlask-b9obmu",
       "categories": [
         "פריטי עיצוב משלימים"
       ],
@@ -520,12 +520,12 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1781623146776-wtu9jp.webp",
-        "https://example.com/assets/product-1781623162143-z0czj.webp"
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1781623146776-wtu9jp.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1781623162143-z0czj.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/kyr-avgn-mavtsb-bhtamh-ayshyt-2sewz8",
+      "url": "https://studio242-home-design-systems.zappy5.app/product/kyr-avgn-mavtsb-bhtamh-ayshyt-2sewz8",
       "categories": [
         "קיר עוגן בהתאמה אישית"
       ],
@@ -545,12 +545,12 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1782727001363-3j6u4e.webp",
-        "https://example.com/assets/product-enhanced-1782726973848-ui2f32.webp"
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1782727001363-3j6u4e.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-enhanced-1782726973848-ui2f32.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/sdrt-admh-vshkt-earth-silence-k2bbpf",
+      "url": "https://studio242-home-design-systems.zappy5.app/product/sdrt-admh-vshkt-earth-silence-k2bbpf",
       "categories": [
         "צילום אומנותי - פיין ארט"
       ],
@@ -570,14 +570,14 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://example.com/assets/product-1783175866639-8utgkn.webp",
-        "https://example.com/assets/product-1783175874167-xmts7f.webp",
-        "https://example.com/assets/product-1783175881554-kf6ne9.webp",
-        "https://example.com/assets/product-1783175889111-cgsrgv.webp"
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783175866639-8utgkn.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783175874167-xmts7f.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783175881554-kf6ne9.webp",
+        "https://studio242-home-design-systems.zappy5.app/assets/product-1783175889111-cgsrgv.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://example.com/product/pynt-tba-mavtsbt-lbyt-vlask-w7we7b",
+      "url": "https://studio242-home-design-systems.zappy5.app/product/pynt-tba-mavtsbt-lbyt-vlask-w7we7b",
       "categories": [
         "מערכות עיצוב מוכנות"
       ],

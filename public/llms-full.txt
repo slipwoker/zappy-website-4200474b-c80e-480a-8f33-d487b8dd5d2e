@@ -2,13 +2,13 @@
 
 A minimalist, emotionally-driven art and photography brand rooted in the philosophy of Wabi-Sabi — finding beauty in imperfection, stillness, and simplicity. The artist creates photography-based artworks designed to integrate harmoniously into living and working spaces, evoking feeling rather than serving as mere decoration. The brand exudes a quiet, slow, non-commercial presence — like a serene gallery experience — and bridges the worlds of fine art, interior design, and emotional well-being. The visual identity is built around large, powerful images, generous white space, and an atmosphere of calm intentionality.
 
-Source: https://example.com
+Source: https://studio242-home-design-systems.zappy5.app
 
 ---
 
 ## אומנות, טבע ועיצוב בהתאמה אישית
 
-URL: https://example.com
+URL: https://studio242-home-design-systems.zappy5.app
 Description: סטודיו 242 משלב צילום אמנותי מקורי, אלמנטים מהטבע ופריטי עיצוב נבחרים ליצירת קומפוזיציות ייחודיות לבית ולעסק. כל פרויקט נבנה בהתאמה אישית במטרה להעניק לחלל נוכחות, איזון ואווירה טבעית.
 
 אומנות, טבע ועיצוב בהתאמה אישית
@@ -195,7 +195,7 @@ Description: סטודיו 242 משלב צילום אמנותי מקורי, אל�
 
 ## עיצוב קיר עוגן ומערכות עיצוב בהתאמה אישית — סטודיו 242
 
-URL: https://example.com/custom-made
+URL: https://studio242-home-design-systems.zappy5.app/custom-made
 Description: מערכות עיצוב שלמות בהתאמה אישית מבית סטודיו 242. קירות עוגן, שילוב אמנות צילום מקורית, חומרים טבעיים וריהוט — תכנון, הדמיה והעמדה. ייעוץ ראשוני ללא עלות.
 
 עיצוב קיר עוגן ומערכות עיצוב בהתאמה אישית — סטודיו 242
@@ -524,7 +524,7 @@ Description: מערכות עיצוב שלמות בהתאמה אישית מבית
 
 ## מדיניות פרטיות
 
-URL: https://example.com/privacy
+URL: https://studio242-home-design-systems.zappy5.app/privacy
 Description: מדיניות הפרטיות שלנו - כיצד אנו אוספים, משתמשים ומגנים על המידע שלכם
 
 מדיניות פרטיות
@@ -748,7 +748,7 @@ Description: מדיניות הפרטיות שלנו - כיצד אנו אוספי
 
 ## הצהרת נגישות
 
-URL: https://example.com/accessibility
+URL: https://studio242-home-design-systems.zappy5.app/accessibility
 Description: הצהרת הנגישות שלנו - מחויבותנו לנגישות דיגיטלית
 
 הצהרת נגישות
@@ -981,7 +981,7 @@ Description: הצהרת הנגישות שלנו - מחויבותנו לנגיש�
 
 ## תנאי שימוש
 
-URL: https://example.com/terms
+URL: https://studio242-home-design-systems.zappy5.app/terms
 Description: תנאי השימוש באתר - הזכויות והחובות של המשתמשים
 
 תנאי שימוש
@@ -1233,7 +1233,7 @@ Description: תנאי השימוש באתר - הזכויות והחובות של
 
 ## מוצרים
 
-URL: https://example.com/products
+URL: https://studio242-home-design-systems.zappy5.app/products
 Description: המוצרים שלנו - סטודיו 242 - מערכות עיצוב לבית
 
 מוצרים - סטודיו 242 - מערכות עיצוב לבית
@@ -1512,7 +1512,7 @@ Description: המוצרים שלנו - סטודיו 242 - מערכות עיצו�
 
 ## עגלת קניות
 
-URL: https://example.com/cart
+URL: https://studio242-home-design-systems.zappy5.app/cart
 Description: עגלת הקניות שלך
 
 עגלת קניות - סטודיו 242 - מערכות עיצוב לבית
@@ -1633,7 +1633,7 @@ Description: עגלת הקניות שלך
 
 ## תשלום
 
-URL: https://example.com/checkout
+URL: https://studio242-home-design-systems.zappy5.app/checkout
 Description: תשלום
 
 תשלום - סטודיו 242 - מערכות עיצוב לבית
@@ -1940,7 +1940,7 @@ Description: תשלום
 
 ## התחברות
 
-URL: https://example.com/login
+URL: https://studio242-home-design-systems.zappy5.app/login
 Description: התחברות לקוחות
 
 התחברות - סטודיו 242 - מערכות עיצוב לבית
@@ -2068,7 +2068,7 @@ Description: התחברות לקוחות
 
 ## החשבון שלי
 
-URL: https://example.com/account
+URL: https://studio242-home-design-systems.zappy5.app/account
 Description: החשבון שלי
 
 החשבון שלי - סטודיו 242 - מערכות עיצוב לבית
@@ -2351,7 +2351,7 @@ Description: החשבון שלי
 
 ## ההזמנה התקבלה!
 
-URL: https://example.com/order-success
+URL: https://studio242-home-design-systems.zappy5.app/order-success
 Description: תודה על ההזמנה
 
 ההזמנה התקבלה! - סטודיו 242 - מערכות עיצוב לבית
@@ -2496,7 +2496,7 @@ Description: תודה על ההזמנה
 
 ## מדיניות החזרות
 
-URL: https://example.com/return-policy
+URL: https://studio242-home-design-systems.zappy5.app/return-policy
 Description: מדיניות החזרת מוצרים - זכויותיכם להחזרה והחלפה בהתאם לחוק
 
 מדיניות החזרות - סטודיו 242 - מערכות עיצוב לבית
@@ -2670,7 +2670,7 @@ Description: מדיניות החזרת מוצרים - זכויותיכם להח�
 
 ## פרטי המוצר
 
-URL: https://example.com/product/:slug
+URL: https://studio242-home-design-systems.zappy5.app/product/:slug
 Description: פרטי המוצר - סטודיו 242 - מערכות עיצוב לבית
 
 פרטי המוצר - סטודיו 242 - מערכות עיצוב לבית
@@ -2793,7 +2793,7 @@ Description: פרטי המוצר - סטודיו 242 - מערכות עיצוב ל
 
 ## מוצרים
 
-URL: https://example.com/category/:slug
+URL: https://studio242-home-design-systems.zappy5.app/category/:slug
 Description: מוצרים - סטודיו 242 - מערכות עיצוב לבית
 
 מוצרים - סטודיו 242 - מערכות עיצוב לבית
@@ -2940,7 +2940,7 @@ Description: מוצרים - סטודיו 242 - מערכות עיצוב לבית
 
 ## אודות סטודיו 242 — סטודיו 242 - מערכות עיצוב לבית
 
-URL: https://example.com/about
+URL: https://studio242-home-design-systems.zappy5.app/about
 Description: היכירו את אופיר מסיקה — צלם אמנות ישראלי שיוצר מתוך שקט, כוונה ויופי של חוסר השלמות. גלו את הפילוסופיה שמאחורי כל יצירה ואת הדרך שהובילה לכאן.
 
 אודות סטודיו 242 — סטודיו 242 - מערכות עיצוב לבית
@@ -3223,7 +3223,7 @@ Founder & Creative Director
 
 ## מוכנים להכניס אמנות לחייכם — אופיר מסיקה
 
-URL: https://example.com/contact
+URL: https://studio242-home-design-systems.zappy5.app/contact
 Description: רוצים לשלב צילום אמנותי לבית, למשרד או לעסק שלכם? צרו קשר עם אופיר מסיקה לייעוץ אישי, שאלות על קולקציות או התאמה מיוחדת לחלל שלכם.
 
 מוכנים להכניס אמנות לחייכם — סטודיו 242 - מערכות עיצוב לבית
@@ -3549,7 +3549,7 @@ ofirmsika@gmail.com
 ## Product Catalog
 
 ### קיר עוגן HARMONY
-URL: https://example.com/product/kyr-avgn-harmony-e6ubcb
+URL: https://studio242-home-design-systems.zappy5.app/product/kyr-avgn-harmony-e6ubcb
 Price: 13900.00 ILS
 Availability: In stock
 
@@ -3558,7 +3558,7 @@ Availability: In stock
 ---
 
 ### Harmony | מערכת עיצוב לקיר הטלוויזיה
-URL: https://example.com/product/harmony-markt-aytsvb-lkyr-htlvvyzyh-00on7l
+URL: https://studio242-home-design-systems.zappy5.app/product/harmony-markt-aytsvb-lkyr-htlvvyzyh-00on7l
 Price: 9450.00 ILS
 Availability: In stock
 
@@ -3567,7 +3567,7 @@ Availability: In stock
 ---
 
 ### מערכת עיצוב לכניסה | Natural Entry 140
-URL: https://example.com/product/markt-aytsvb-lknysh-natural-entry-140-dejdta
+URL: https://studio242-home-design-systems.zappy5.app/product/markt-aytsvb-lknysh-natural-entry-140-dejdta
 Price: 6900.00 ILS
 Availability: In stock
 
@@ -3576,7 +3576,7 @@ Availability: In stock
 ---
 
 ### קונסולת עץ מלא, ברזל שחור מעוצב ונוכחות מרשימה
-URL: https://example.com/product/kvnsvlt-ats-mla-brzl-shchvr-mavtsb-vnvkchvt-mrshymh-qefbhx
+URL: https://studio242-home-design-systems.zappy5.app/product/kvnsvlt-ats-mla-brzl-shchvr-mavtsb-vnvkchvt-mrshymh-qefbhx
 Price: 3290.00 ILS
 Availability: In stock
 
@@ -3585,7 +3585,7 @@ Availability: In stock
 ---
 
 ### Dining Wall Set | מערכת עיצוב קיר לפינת אוכל
-URL: https://example.com/product/dining-wall-set-markt-aytsvb-kyr-lpynt-avkl-c0ppz7
+URL: https://studio242-home-design-systems.zappy5.app/product/dining-wall-set-markt-aytsvb-kyr-lpynt-avkl-c0ppz7
 Price: 3950.00 ILS
 Availability: In stock
 
@@ -3594,7 +3594,7 @@ Dining Wall Set | סט קיר לפינת אוכל סט עיצוב לקיר פי�
 ---
 
 ### Wall Set | סט קיר מאוזן
-URL: https://example.com/product/wall-set-st-kyr-mavzn-osztht
+URL: https://studio242-home-design-systems.zappy5.app/product/wall-set-st-kyr-mavzn-osztht
 Price: 2290.00 ILS
 Availability: In stock
 
@@ -3603,7 +3603,7 @@ Availability: In stock
 ---
 
 ### מערכת קיר מרכזי  Tv Balance
-URL: https://example.com/product/markt-kyr-mrkzy-tv-balance-nmovsc
+URL: https://studio242-home-design-systems.zappy5.app/product/markt-kyr-mrkzy-tv-balance-nmovsc
 Price: 6950.00 ILS
 Availability: In stock
 
@@ -3612,7 +3612,7 @@ Availability: In stock
 ---
 
 ### Between 03- Passage I
-URL: https://example.com/product/between-03-passage-i-r9ouii
+URL: https://studio242-home-design-systems.zappy5.app/product/between-03-passage-i-r9ouii
 Price: 1190.00 ILS
 Availability: In stock
 
@@ -3621,7 +3621,7 @@ Passage I היא חלק מקולקציית Between של Studio 242 – סדרת 
 ---
 
 ### Between 01 - Stillness I
-URL: https://example.com/product/between-01-stillness-i-cir62t
+URL: https://studio242-home-design-systems.zappy5.app/product/between-01-stillness-i-cir62t
 Price: 1190.00 ILS
 Availability: In stock
 
@@ -3630,7 +3630,7 @@ Stillness I היא חלק מקולקציית Between של Studio 242 – סדר�
 ---
 
 ### Between 02 - Quiet Growth 
-URL: https://example.com/product/between-02-quiet-growth-zhnv9l
+URL: https://studio242-home-design-systems.zappy5.app/product/between-02-quiet-growth-zhnv9l
 Price: 1190.00 ILS
 Availability: In stock
 
@@ -3639,7 +3639,7 @@ Quiet Growth היא חלק מקולקציית Between של Studio 242 – סדר
 ---
 
 ### פיסת טבע מהגליל | מארז אווירה 
-URL: https://example.com/product/pyst-tba-mhglyl-marz-avvyrh-g99hog
+URL: https://studio242-home-design-systems.zappy5.app/product/pyst-tba-mhglyl-marz-avvyrh-g99hog
 Price: 290.00 ILS (sale, was 330.00 ILS)
 Availability: In stock
 
@@ -3648,7 +3648,7 @@ Availability: In stock
 ---
 
 ### קיר עוגן ירוק | ספסל עץ אלון, מדפי עץ, אמנות בוטנית ועץ שתול
-URL: https://example.com/product/kyr-avgn-yrvk-spsl-ats-alvn-mdpy-ats-amnvt-bvtnyt-vats-shtvl-syz8r0
+URL: https://studio242-home-design-systems.zappy5.app/product/kyr-avgn-yrvk-spsl-ats-alvn-mdpy-ats-amnvt-bvtnyt-vats-shtvl-syz8r0
 Price: 5950.00 ILS
 Availability: In stock
 
@@ -3657,7 +3657,7 @@ Availability: In stock
 ---
 
 ### מערכת כניסה | Wall Set | ספסל עץ ובטון | Studio 242
-URL: https://example.com/product/markt-knysh-wall-set-spsl-ats-vbtvn-studio-242-qfw9un
+URL: https://studio242-home-design-systems.zappy5.app/product/markt-knysh-wall-set-spsl-ats-vbtvn-studio-242-qfw9un
 Price: 4800.00 ILS
 Availability: In stock
 
@@ -3666,7 +3666,7 @@ Availability: In stock
 ---
 
 ### ספסל עץ אלון ורגלי בטון | סדרת פינת עוגן – Studio 242
-URL: https://example.com/product/spsl-ats-alvn-vrgly-btvn-sdrt-pynt-avgn-studio-242-rlpv3s
+URL: https://studio242-home-design-systems.zappy5.app/product/spsl-ats-alvn-vrgly-btvn-sdrt-pynt-avgn-studio-242-rlpv3s
 Price: 2900.00 ILS
 Availability: In stock
 
@@ -3675,7 +3675,7 @@ Availability: In stock
 ---
 
 ### שקט לבן | White Serenity Collection
-URL: https://example.com/product/shkt-lbn-white-serenity-collection-apg3ta
+URL: https://studio242-home-design-systems.zappy5.app/product/shkt-lbn-white-serenity-collection-apg3ta
 Price: 1890.00 ILS
 Availability: In stock
 
@@ -3684,7 +3684,7 @@ White Serenity Collection – The Art of Calm Spaces ישנם חללים שאי�
 ---
 
 ### William Morris | Botanical Collection
-URL: https://example.com/product/william-morris-botanical-collection-9wyctw
+URL: https://studio242-home-design-systems.zappy5.app/product/william-morris-botanical-collection-9wyctw
 Price: 1790.00 ILS
 Availability: In stock
 
@@ -3693,7 +3693,7 @@ Botanical Collection by William Morris סדרה זו מוקדשת לשפת הע�
 ---
 
 ### סדרת Nature in Focus | שלישיית הדפסי טבע אמנותיים – 100×70 ס"מ
-URL: https://example.com/product/sdrt-nature-in-focus-shlyshyyt-hdpsy-tba-amnvtyym-10070-sm-9ka7z4
+URL: https://studio242-home-design-systems.zappy5.app/product/sdrt-nature-in-focus-shlyshyyt-hdpsy-tba-amnvtyym-10070-sm-9ka7z4
 Price: 2990.00 ILS
 Availability: In stock
 
@@ -3702,7 +3702,7 @@ Nature in Focus היא סדרת צילומי טבע אמנותיים שנולד�
 ---
 
 ### בוצ'ר עץ אלון מלא צף | Live Edge | רוחב 30 ס"מ | עובי כ-4 ס"מ | 120 / 140 / 180 ס"מ
-URL: https://example.com/product/bvtsr-ats-alvn-mla-tsp-live-edge-rvchb-30-sm-avby-k-4-sm-120-140-180-sm-kcszcx
+URL: https://studio242-home-design-systems.zappy5.app/product/bvtsr-ats-alvn-mla-tsp-live-edge-rvchb-30-sm-avby-k-4-sm-120-140-180-sm-kcszcx
 Price: 990.00 ILS
 Availability: In stock
 
@@ -3711,7 +3711,7 @@ Availability: In stock
 ---
 
 ### ספסל עץ מלא טבעי Live Edge | 150×32 ס"מ | ספסל מעוצב לבית ולעסק
-URL: https://example.com/product/spsl-ats-mla-tbay-live-edge-15032-sm-spsl-mavtsb-lbyt-vlask-b9obmu
+URL: https://studio242-home-design-systems.zappy5.app/product/spsl-ats-mla-tbay-live-edge-15032-sm-spsl-mavtsb-lbyt-vlask-b9obmu
 Price: 1800.00 ILS
 Availability: In stock
 
@@ -3720,7 +3720,7 @@ Availability: In stock
 ---
 
 ### קיר עוגן מעוצב בהתאמה אישית
-URL: https://example.com/product/kyr-avgn-mavtsb-bhtamh-ayshyt-2sewz8
+URL: https://studio242-home-design-systems.zappy5.app/product/kyr-avgn-mavtsb-bhtamh-ayshyt-2sewz8
 Price: 5500.00 ILS
 Availability: In stock
 
@@ -3729,7 +3729,7 @@ Availability: In stock
 ---
 
 ### סדרת אדמה ושקט | Earth & Silence
-URL: https://example.com/product/sdrt-admh-vshkt-earth-silence-k2bbpf
+URL: https://studio242-home-design-systems.zappy5.app/product/sdrt-admh-vshkt-earth-silence-k2bbpf
 Price: 1190.00 ILS
 Availability: In stock
 
@@ -3738,7 +3738,7 @@ Availability: In stock
 ---
 
 ### פינת טבע מעוצבת לבית ולעסק
-URL: https://example.com/product/pynt-tba-mavtsbt-lbyt-vlask-w7we7b
+URL: https://studio242-home-design-systems.zappy5.app/product/pynt-tba-mavtsbt-lbyt-vlask-w7we7b
 Price: 1800.00 ILS
 Availability: In stock
 
