@@ -1185,6 +1185,8 @@ window.onload = function() {
 ;
 
 ;
+
+;
 /* ==ZAPPY E-COMMERCE JS START== */
 // E-commerce functionality
 (function() {
@@ -18486,13 +18488,43 @@ function withConsent(category, callback) {
   
   var initAttempts = 0;
   var maxAttempts = 50;
+  var cookieConsentScriptSrc = 'https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js';
+  var cookieConsentLoadPromise = null;
+
+  function loadCookieConsentLibrary() {
+    if (typeof window.CookieConsent !== 'undefined') {
+      return Promise.resolve(window.CookieConsent);
+    }
+    if (cookieConsentLoadPromise) {
+      return cookieConsentLoadPromise;
+    }
+    cookieConsentLoadPromise = new Promise(function(resolve, reject) {
+      var existing = document.querySelector('script[data-zappy-cookie-consent="true"]');
+      if (existing) {
+        existing.addEventListener('load', function() { resolve(window.CookieConsent); }, { once: true });
+        existing.addEventListener('error', reject, { once: true });
+        return;
+      }
+      var script = document.createElement('script');
+      script.src = cookieConsentScriptSrc;
+      script.async = true;
+      script.defer = true;
+      script.setAttribute('data-zappy-cookie-consent', 'true');
+      script.onload = function() { resolve(window.CookieConsent); };
+      script.onerror = reject;
+      document.head.appendChild(script);
+    }).catch(function() {
+      cookieConsentLoadPromise = null;
+    });
+    return cookieConsentLoadPromise;
+  }
   
   function initCookieConsent() {
     initAttempts++;
     
     if (typeof window.CookieConsent === 'undefined') {
       if (initAttempts < maxAttempts) {
-        setTimeout(initCookieConsent, 100);
+        loadCookieConsentLibrary().then(initCookieConsent);
       }
       return;
     }
@@ -19335,19 +19367,23 @@ function withConsent(category, callback) {
     }
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initCookieConsent);
-    setTimeout(initCookieConsent, 1000);
-  } else if (document.readyState === 'interactive' || document.readyState === 'complete') {
-    initCookieConsent();
-  } else {
-    setTimeout(initCookieConsent, 500);
-  }
-  
-  if (typeof window !== 'undefined') {
-    if (window.addEventListener) {
-      window.addEventListener('load', initCookieConsent, { once: true });
+  function scheduleCookieConsentLoad() {
+    var start = function() {
+      loadCookieConsentLibrary().then(initCookieConsent);
+    };
+    if (typeof window.requestIdleCallback === 'function') {
+      window.requestIdleCallback(start, { timeout: 7000 });
+    } else {
+      setTimeout(start, 7000);
     }
+  }
+
+  if (document.readyState === 'complete') {
+    scheduleCookieConsentLoad();
+  } else if (typeof window !== 'undefined' && window.addEventListener) {
+    window.addEventListener('load', scheduleCookieConsentLoad, { once: true });
+  } else {
+    setTimeout(scheduleCookieConsentLoad, 1000);
   }
 })();
 
